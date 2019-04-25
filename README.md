@@ -109,6 +109,7 @@ View your MAC faster
 	NoSQLMap                        by codingo, tcsstool
 	Evil-Droid                      by Mascerano Bachir
 	Iftop                           by Paul Warren, Chris Lightfoot
+	FSociety                        by Manisso
 	MORE ARE BEING ADDED ON EVERY UPDATE
 	
 **Wifi password scripts**
