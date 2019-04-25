@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # set -x
-VERSION=1.1.0
+VERSION=1.1.1
 #Number of tools with keyboard shortcut support
 HOWMANYTOOLS=55
 BACKL="0"
@@ -3386,12 +3386,8 @@ function wifi_tools
 			if [[ -d "$TOOLPATH/Zatacker" ]]
 			then	
 				cd $TOOLPATH/Zatacker
-				./ZT.sh
+				bash ZT.sh
 				cd
-			else
-				echo -e "You have to install it manually since its not on github.Sorry."
-				sleep 4
-				exec bash "$0"
 			fi
 		else
 			echo -e "$TNI"
@@ -9871,12 +9867,6 @@ check_if_ks
 			sudo python setup.py install
 		fi
 	}
-	function install_zatacker
-	{
-		echo -e "I cannot install Zatacker. Please google how to do that yourself."
-		echo -e "$PAKTGB"
-		read
-	}
 	function install_morpheus
 	{
 		foldname="morpheus"
@@ -10973,9 +10963,24 @@ check_if_ks
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
 		then
-			cd set
+			cd /usr/share/set
 			pip install -r requeriments.txt
 		fi
+	}
+	function install_zatacker
+	{
+		foldname="Zatacker"
+		gitlink="https://github.com/lawrenceamer/zero-attacker.git"
+		cd $TOOLPATH
+		git clone $gitlink $foldname
+		cloned=$?
+		if [[ "$cloned" == 1 ]]
+		then
+			cd $TOOLPATH/Zatacker
+			chmod +x setup.sh
+			bash setup.sh
+		fi
+
 	}
 
 		
