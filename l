@@ -1,9 +1,9 @@
 #! /bin/bash
 
 # set -x
-VERSION=2.1.5
+VERSION=1.1.0
 #Number of tools with keyboard shortcut support
-HOWMANYTOOLS=53
+HOWMANYTOOLS=55
 BACKL="0"
 DONATIONS=13
 LATESTCHANGELOGLINES=26
