@@ -109,6 +109,7 @@ View your MAC faster
 	NoSQLMap                        by codingo, tcsstool
 	Evil-Droid                      by Mascerano Bachir
 	Iftop                           by Paul Warren, Chris Lightfoot
+	FSociety                        by Manisso
 	MORE ARE BEING ADDED ON EVERY UPDATE
 	
 **Wifi password scripts**
@@ -135,7 +136,7 @@ View your MAC faster
 
 ```
 cd
-git clone https://github.com/arismelachroinos/lscript.git
+git clone https://github.com/DoomFishYT/lscript.git --branch 1.1.1
 cd lscript
 chmod +x install.sh
 ./install.sh
