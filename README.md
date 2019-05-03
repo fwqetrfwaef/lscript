@@ -136,7 +136,7 @@ View your MAC faster
 
 ```
 cd
-git clone https://github.com/arismelachroinos/lscript.git
+git clone https://github.com/DoomFishYT/lscript.git --branch 1.1.1
 cd lscript
 chmod +x install.sh
 ./install.sh
