@@ -1,9 +1,9 @@
 #! /bin/bash
 
 # set -x
-VERSION=1.1.1
+VERSION=1.1.2
 #Number of tools with keyboard shortcut support
-HOWMANYTOOLS=55
+HOWMANYTOOLS=53
 BACKL="0"
 DONATIONS=13
 LATESTCHANGELOGLINES=26
@@ -3139,7 +3139,7 @@ function wifi_tools
 	else
 		echo -e ""$RS" 1"$CE") "$RS"Fluxion"$CE"               The future of MITM WPA attacks"
 	fi
-	if [[ -f /usr/bin/wifite ]]
+	if [[ -d /usr/share/wifite ]]
 	then
 		echo -e ""$YS" 2"$CE") Wifite                Automated wireless attack tool"
 	else
@@ -3153,9 +3153,9 @@ function wifi_tools
 	fi
 	if [[ -d $TOOLPATH/Zatacker ]]
 	then
-		echo -e ""$YS" 4"$CE") Zatacker              MITM-NMAP-Mail Spammer..(Install it manually)"
+		echo -e ""$YS" 4"$CE") Zatacker              MITM-NMAP-Mail Spammer"
 	else
-		echo -e ""$RS" 4"$CE") "$RS"Zatacker"$CE"              MITM-NMAP-Mail Spammer..(Install it manually)"
+		echo -e ""$RS" 4"$CE") "$RS"Zatacker"$CE"              MITM-NMAP-Mail Spammer"
 	fi
 	if [[ -d $TOOLPATH/morpheus ]]
 	then
@@ -3307,7 +3307,7 @@ function wifi_tools
 	else
 		echo -e ""$RS"28"$CE") "$RS"Gloom"$CE"                 Penetration Testing Framework"
 	fi
-	if [[ -f /usr/bin/sechub ]]
+	if [[ -f $TOOLPATH/secHub ]]
 	then
 		echo -e ""$YS"29"$CE") secHub                Security/Hacking Kit"
 	else
@@ -3350,7 +3350,7 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "2" ]]
 	then
-		if [[ -f /usr/bin/wifite ]]
+		if [[ -d /usr/share/wifite ]]
 		then
 			wifite
 		else
@@ -3839,7 +3839,7 @@ function wifi_tools
 		cd
 	elif [[ "$APPP" = "29" ]]
 	then
-		if [[ -f "/usr/bin/sechub" ]]
+		if [[ -f "$TOOLPATH/secHub" ]]
 		then
 			sechub
 		else
@@ -6348,7 +6348,7 @@ function update_lscript
 	TESTINTERNETCONNECTION=$(curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//')
 	if [[ "$TESTINTERNETCONNECTION" != "" ]]
 	then
-		VER=$(timeout -s SIGTERM 20 curl "https://raw.githubusercontent.com/arismelachroinos/lscript/master/version.txt" 2>/dev/null)
+		VER=$(timeout -s SIGTERM 20 curl "https://raw.githubusercontent.com/DoomFishYT/lscript/master/version.txt" 2>/dev/null)
 		if [[ "$VERSION" != "$VER" ]]
 		then
 			clear
@@ -6377,7 +6377,7 @@ function update_lscript
 				#~ echo -e "Cloning the latest github version to new "$LPATH""
 				sleep 1
 				cd
-				git clone https://github.com/arismelachroinos/lscript.git
+				git clone https://github.com/DoomFishYT/lscript.git --branch $VER
 				cd "$LPATH"
 				chmod +x install.sh
 				clear
@@ -10656,7 +10656,7 @@ check_if_ks
 		if [[ "$cloned" == 1 ]]
 		then
 			python installer.py
-			chmod +x /usr/bin/sechub
+			chmod +x $TOOLPATH/secHub
 		fi
 	}
 	function install_beef
