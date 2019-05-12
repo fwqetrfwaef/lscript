@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # set -x
-VERSION=1.1.2
+VERSION=1.1.3
 #Number of tools with keyboard shortcut support
 HOWMANYTOOLS=53
 BACKL="0"
@@ -3139,7 +3139,7 @@ function wifi_tools
 	else
 		echo -e ""$RS" 1"$CE") "$RS"Fluxion"$CE"               The future of MITM WPA attacks"
 	fi
-	if [[ -d /usr/share/wifite ]]
+	if [[ -d /usr/share/doc/wifite ]]
 	then
 		echo -e ""$YS" 2"$CE") Wifite                Automated wireless attack tool"
 	else
@@ -3350,7 +3350,7 @@ function wifi_tools
 		fi
 	elif [[ "$APPP" = "2" ]]
 	then
-		if [[ -d /usr/share/wifite ]]
+		if [[ -d /usr/share/doc/wifite ]]
 		then
 			wifite
 		else
